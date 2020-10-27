@@ -1,0 +1,10 @@
+---
+layout: DefaultLayout.njk
+title: Home page
+---
+
+<h1>Home page</h1>
+
+{% for project in projects %}
+	<p>{{ project }}</p>
+{% endfor %}

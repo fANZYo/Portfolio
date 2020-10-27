@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fANZYo/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fANZYo/Portfolio/issues"
+  },
+  "homepage": "https://github.com/fANZYo/Portfolio#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.3.8"
+  }
+}
