@@ -1,17 +1,49 @@
 const htmlmin = require('html-minifier');
 const terser = require('terser');
+const sass = require('node-sass');
+const cleanCSS = require('clean-css');
+const { preBuild, postBuild } = require('./gulpfile');
 
 module.exports = (config) => {
-	config.addPassthroughCopy({ 'src/js': 'js' });
+	config.addWatchTarget('./src/js/');
+	config.addWatchTarget('./src/scss/');
 
-	// TODO: Add scss to css
+	config.on('beforeBuild', () => {
+		 preBuild(); 
+	});
+
+	config.on('afterBuild', () => {
+		 postBuild(); 
+	});
+
+	config.addNunjucksAsyncFilter('sass', async (code, callback) => {
+		try {
+			const compiled = sass.renderSync({ data: code });
+
+			callback(null, compiled.css);
+		} catch (err) {
+			console.error('Terser error: ', err);
+			callback(null, code);
+		}
+	});
+
+	config.addNunjucksAsyncFilter('cssmin', async (code, callback) => {
+		try {
+			const minified = await new cleanCSS({ level: 2 }).minify(code).styles;
+
+			callback(null, minified);
+		} catch (err) {
+			console.error('Terser error: ', err);
+			callback(null, code);
+		}
+	});
 
 	config.addNunjucksAsyncFilter('jsmin', async (code, callback) => {
 		try {
 			const minified = await terser.minify(code);
 			callback(null, minified.code);
 		} catch (err) {
-			console.error("Terser error: ", err);
+			console.error('Terser error: ', err);
 			callback(null, code);
 		}
 	});
@@ -30,7 +62,7 @@ module.exports = (config) => {
 		return content;
 	});
 
-	config.setTemplateFormats('njk,js,css');
+	config.setTemplateFormats('njk');
 
 	return {
 		dir: {
