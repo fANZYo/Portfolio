@@ -1,13 +1,36 @@
 ---
 layout: DefaultLayout.njk
-title: Home page
+title: Company name
 ---
 
-<h1>Home page</h1>
+<section>
+	<h1>Tag line</h1>
+	<p>The why</p>
+</section>
 
-{% for project in projects %}
-	<p>{{ project }}</p>
-{% endfor %}
+<section>
+	<h2>Work done</h2>
 
-{% include "Button.njk" %}
-{% include "Button.njk" %}
+	<ul>
+		{% for project in projects %}
+			<li>
+				<a href="{{ project.url }}">
+					<h3>{{ project.title }}</h3>
+					<img
+						class="js-lazy-img"
+						src="/img/placeholder.png"
+						data-srcset="{{ project.img.small }} 300w, {{ project.img.medium }} 600w, {{ project.img.large }} 900w"
+						sizes="100vw"
+						alt="{{ project.img.alt }}"
+					/>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</section>
+
+<style type="text/css" media="all">
+img {
+	width: 100%;
+}
+</style>
