@@ -7,6 +7,8 @@ const { preBuild, postBuild } = require('./gulpfile');
 module.exports = (config) => {
 	config.addWatchTarget('./src/js/');
 	config.addWatchTarget('./src/scss/');
+	config.addWatchTarget('./src/img/');
+	config.addPassthroughCopy({ 'src/img': 'img' });
 
 	config.on('beforeBuild', () => {
 		 preBuild(); 
