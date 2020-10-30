@@ -3,9 +3,9 @@ module.exports = () => {
 		{
 			title: 'Scope',
 			img: {
-				small: 'https://baconmockup.com/300/300',
-				medium: 'https://baconmockup.com/600/600',
-				large: 'https://baconmockup.com/900/900',
+				small: '/assets/scope.webp?nf_resize=fit&w=720',
+				medium: '/assets/scope.webp?nf_resize=fit&w=1080',
+				large: '/assets/scope.webp?nf_resize=fit&w=2040',
 				alt: 'scope',
 			},
 			content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -14,9 +14,9 @@ module.exports = () => {
 		{
 			title: 'Tottenham Hotspurs',
 			img: {
-				small: 'https://baconmockup.com/300/300',
-				medium: 'https://baconmockup.com/600/600',
-				large: 'https://baconmockup.com/900/900',
+				small: '/assets/spurs.webp?nf_resize=fit&w=720',
+				medium: '/assets/spurs.webp?nf_resize=fit&w=1080',
+				large: '/assets/spurs.webp?nf_resize=fit&w=2040',
 				alt: 'spurs',
 			},
 			content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
