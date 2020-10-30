@@ -9,7 +9,6 @@ module.exports = (config) => {
 	config.addWatchTarget('./src/scss/');
 	config.addWatchTarget('./src/img/');
 	config.addPassthroughCopy({ 'src/img': 'img' });
-	config.addPassthroughCopy({ 'src/data/assets': 'assets' });
 
 	config.on('beforeBuild', () => {
 		 preBuild(); 
