@@ -1,0 +1,20 @@
+<div class="Navigation">
+	<div class="Navigation__wrapper wrapper">
+		<h1 class="Navigation__title">
+			<a class="Navigation__title-link" href="/">logo</a>
+		</h1>
+		<nav class="Navigation__nav">
+			<ul class="Navigation__list">
+				<li class="Navigation__item {% if homePage %}Navigation__item--active{% endif %}">
+					<a href="/">home</a>
+				</li>
+				<li class="Navigation__item {% if aboutPage %}Navigation__item--active{% endif %}">
+					<a href="/about">about</a>
+				</li>
+				<li class="Navigation__item {% if contactPage %}Navigation__item--active{% endif %}">
+					<a href="/contact">contact</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>

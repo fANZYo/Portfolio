@@ -1,14 +1,15 @@
 @import "./mixins";
 
+$font-size: 18px;
+
 // Colors
 $dark-grey: #23252f;
 $white: #e9e9ea;
 
 // Grid
-$container-width: rem(1400px);
+$container-width: rem(960px);
 
 // Headings
 $heading1: 60px;
-$heading2: 40px;
-$heading3: 25px;
-$heading4: 20px;
+$heading2: 50px;
+$heading3: 18px;

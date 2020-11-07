@@ -8,12 +8,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="blah">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&&display=swap" rel="stylesheet">
 	<link href="/css/styles.css" rel="stylesheet">
 	<title>{{ title }}</title>
 </head>
 <body>
+	{% include "Navigation.njk" %}
 	{{ content | safe }}
 
 	<script>

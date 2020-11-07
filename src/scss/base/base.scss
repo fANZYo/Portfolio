@@ -1,5 +1,23 @@
+html {
+	font-size: $font-size;
+}
+
 body {
-	background: $dark-grey;
-	font-family: "Source Sans Pro", sans-serif;
-	color: $white;
+	background: $white;
+	color: $dark-grey;
+	font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+	max-width: $container-width;
+	margin: 0 auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	font-size: inherit;
 }

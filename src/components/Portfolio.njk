@@ -1,9 +1,9 @@
 <section class="Portfolio">
-	<div class="Portfolio__wrapper">
-		<h2 class="Portfolio__title">Work done</h2>
+	<div class="Portfolio__wrapper wrapper">
+		<h2 class="Portfolio__title">{{ portfolio.title }}</h2>
 
 		<ul class="Portfolio__list">
-			{% for project in projects %}
+			{% for project in portfolio.projects %}
 				<li class="Portfolio__item">
 					<a class="Portfolio__item-link" href="{{ project.url }}">
 						<h3 class="Portfolio__item-title">{{ project.title }}</h3>

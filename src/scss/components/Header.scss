@@ -1,12 +1,19 @@
 .Header {
-	height: em(400px);
-	display: flex;
-	justify-content: center;
+	background: $dark-grey;
+	color: $white;
+	padding: em(150px) 0;
 	text-align: center;
-	flex-direction: column;
 
 	&__title {
 		@include heading1;
-		margin-bottom: em(20px, $heading1);
+		margin-bottom: em(30px, $heading1);
+	}
+
+	&__subline {
+		margin-bottom: em(50px);
+	}
+
+	&__contact {
+		@include cta;
 	}
 }

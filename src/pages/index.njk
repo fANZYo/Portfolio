@@ -1,10 +1,14 @@
 ---
 layout: DefaultLayout.njk
 title: Company name
+homePage: true
 ---
 
+{% set header = homepage.header %}
 {% include "Header.njk" %}
 
+{% set usp = homepage.usp %}
 {% include "USP.njk" %}
 
+{% set portfolio = homepage.portfolio %}
 {% include "Portfolio.njk" %}

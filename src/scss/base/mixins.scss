@@ -1,13 +1,13 @@
 @mixin heading1 {
   font-family: 'Montserrat', sans-serif;
   font-size: em($heading1);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @mixin heading2 {
   font-family: 'Montserrat', sans-serif;
   font-size: em($heading2);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @mixin heading3 {
@@ -16,21 +16,35 @@
   font-weight: 600;
 }
 
-@mixin heading4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: em($heading4);
-  font-weight: 600;
+@mixin cta {
+	$font-size: 13px;
+
+	background: $white;
+	border: none;
+	border-radius: em(25px, $font-size);
+	color: $dark-grey;
+	cursor: pointer;
+	display: inline-block;
+	font-size: em($font-size);
+	font-weight: 600;
+	padding: calc((#{em(50px, $font-size)} - 1em) / 2) 0;
+	text-transform: uppercase;
+	transition: transform .25s;
+	width: em(200px, $font-size);
+
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 
-@function em($size, $context: 16px) {
-  @if $size == 0 { @return 0; }
+@function em($size, $context: $font-size) {
+	@if $size == 0 { @return 0; }
 
-  @return $size / $context + 0em;
+	@return $size / $context + 0em;
 }
 
-@function rem($size, $context: 16px) {
-  @if $size == 0 { @return 0; }
+@function rem($size, $context: $font-size) {
+	@if $size == 0 { @return 0; }
 
-  @return $size / $context + 0rem;
+	@return $size / $context + 0rem;
 }
-

@@ -1,9 +1,9 @@
 .Portfolio {
+	background: $dark-grey;
+	color: $white;
 	text-align: center;
 
 	&__wrapper {
-		max-width: $container-width;
-		margin: 0 auto;
 		padding: 2em 0;
 	}
 
