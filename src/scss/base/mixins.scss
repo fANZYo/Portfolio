@@ -1,0 +1,36 @@
+@mixin heading1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: em($heading1);
+  font-weight: 600;
+}
+
+@mixin heading2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: em($heading2);
+  font-weight: 600;
+}
+
+@mixin heading3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: em($heading3);
+  font-weight: 600;
+}
+
+@mixin heading4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: em($heading4);
+  font-weight: 600;
+}
+
+@function em($size, $context: 16px) {
+  @if $size == 0 { @return 0; }
+
+  @return $size / $context + 0em;
+}
+
+@function rem($size, $context: 16px) {
+  @if $size == 0 { @return 0; }
+
+  @return $size / $context + 0rem;
+}
+

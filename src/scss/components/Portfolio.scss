@@ -1,0 +1,42 @@
+.Portfolio {
+	text-align: center;
+
+	&__wrapper {
+		max-width: $container-width;
+		margin: 0 auto;
+		padding: 2em 0;
+	}
+
+	&__title {
+		@include heading2;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		flex: 1 1 50%;
+		overflow: hidden;
+
+		&-link {
+			display: block;
+			padding-top: 100%;
+			position: relative;
+		}
+
+		&-title {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&-img {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			height: 100%;
+		}
+	}
+}

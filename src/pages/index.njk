@@ -3,34 +3,8 @@ layout: DefaultLayout.njk
 title: Company name
 ---
 
-<section>
-	<h1>Tag line</h1>
-	<p>The why</p>
-</section>
+{% include "Header.njk" %}
 
-<section>
-	<h2>Work done</h2>
+{% include "USP.njk" %}
 
-	<ul>
-		{% for project in projects %}
-			<li>
-				<a href="{{ project.url }}">
-					<h3>{{ project.title }}</h3>
-					<img
-						class="js-lazy-img"
-						src="/img/placeholder.png"
-						data-srcset="{{ project.img.small }} 720w, {{ project.img.medium }} 1080w, {{ project.img.large }} 2040w"
-						sizes="100vw"
-						alt="{{ project.img.alt }}"
-					/>
-				</a>
-			</li>
-		{% endfor %}
-	</ul>
-</section>
-
-<style type="text/css" media="all">
-img {
-	width: 100%;
-}
-</style>
+{% include "Portfolio.njk" %}

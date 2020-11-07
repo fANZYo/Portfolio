@@ -1,0 +1,11 @@
+.USP {
+	background: $white;
+	color: $dark-grey;
+	padding: 1em 0;
+	text-align: center;
+
+	&__title {
+		@include heading2;
+		margin-bottom: em(20px, $heading2);
+	}
+}

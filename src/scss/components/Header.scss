@@ -1,0 +1,12 @@
+.Header {
+	height: em(400px);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+
+	&__title {
+		@include heading1;
+		margin-bottom: em(20px, $heading1);
+	}
+}
