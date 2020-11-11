@@ -1,5 +1,10 @@
 <section class="Header">
-	<h2 class="Header__title">{{ header.title }}</h2>
-	<p class="Header__subline">{{ header.subline }}</p>
-	<a class="Header__contact" href="/contact">{{ header.cta }}</a>
+	<div class="wrapper">
+		<h2 class="Header__title">{{ header.title }}</h2>
+		<p class="Header__subline">{{ header.subline }}</p>
+		<div>
+			<a class="Header__contact" href="/contact">{{ header.ctas.talk }}</a>
+			<a class="Header__more" href="#usp">{{ header.ctas.more }}</a>
+		</div>
+	</div>
 </section>

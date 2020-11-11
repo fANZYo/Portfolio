@@ -1,9 +1,16 @@
 .USP {
 	padding: 1em 0;
-	text-align: center;
 
 	&__title {
 		@include heading2;
 		margin-bottom: em(20px, $heading2);
+		text-align: center;
+	}
+
+	&__section {
+		&-title {
+			@include heading4;
+			margin-bottom: 0.75em;
+		}
 	}
 }

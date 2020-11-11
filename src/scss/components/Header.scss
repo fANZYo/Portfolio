@@ -1,16 +1,25 @@
 .Header {
 	background: $dark-grey;
 	color: $white;
-	padding: em(150px) 0;
-	text-align: center;
+	padding: em(200px) 0;
 
 	&__title {
 		@include heading1;
-		margin-bottom: em(30px, $heading1);
+		margin-bottom: em(20px, $heading1);
 	}
 
 	&__subline {
 		margin-bottom: em(50px);
+	}
+
+	&__more {
+		font-size: em(13px);
+		margin-left: em(20px, 13px);
+		text-transform: uppercase;
+
+		&::after {
+			content: ' ▼';
+		}
 	}
 
 	&__contact {

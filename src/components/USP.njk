@@ -1,3 +1,19 @@
-<section class="USP">
-	<h2 class="USP__title">{{ usp.title }}</h2>
+<section id="usp" class="USP">
+	<div class="wrapper">
+		<h2 class="USP__title">{{ usp.title }}</h2>
+		<div class="USP__sections">
+			{% for section in usp.sections %}
+				<div class="USP__section">
+					<div class="USP__section-content">
+						{% if section.more %}
+							<a class="USP__section-more" href="/about">{{ section.more }}</a>
+						{% else %}
+							<h3 class="USP__section-title">{{ section.title }}</h3>
+							<p class="USP__section-text">{{ section.text }}</p>
+						{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
 </section>

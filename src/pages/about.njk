@@ -1,6 +1,10 @@
 ---
 layout: DefaultLayout.njk
 title: About page
+aboutPage: true
 ---
 
-<h1>About page</h1>
+<h1>{{ about.title }}</h1>
+<div class="rte">
+	{{ about.content | safe }}
+</div>

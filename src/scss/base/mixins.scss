@@ -16,21 +16,29 @@
   font-weight: 600;
 }
 
+@mixin heading4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: em($heading4);
+  font-weight: 600;
+	text-transform: uppercase;
+}
+
 @mixin cta {
 	$font-size: 13px;
 
 	background: $white;
 	border: none;
-	border-radius: em(25px, $font-size);
+	border-radius: em(20px, $font-size);
 	color: $dark-grey;
 	cursor: pointer;
 	display: inline-block;
 	font-size: em($font-size);
 	font-weight: 600;
-	padding: calc((#{em(50px, $font-size)} - 1em) / 2) 0;
+	padding: calc((#{em(40px, $font-size)} - 1em) / 2) 0;
+	text-align: center;
 	text-transform: uppercase;
 	transition: transform .25s;
-	width: em(200px, $font-size);
+	width: em(175px, $font-size);
 
 	&:hover {
 		transform: scale(1.05);
