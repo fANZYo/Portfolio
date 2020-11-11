@@ -21,6 +21,9 @@ const criticalCSS = () => {
 				width: 1300,
 				height: 900,
 				minify: true,
+				ignore: {
+					atrule: ['@font-face'],
+				},
 			})
 		)
 		.on('error', err => {
