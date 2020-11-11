@@ -29,7 +29,7 @@ module.exports = () => {
 					illustation: 'https://placekitten.com/160/90',
 				},
 				{
-					more: 'Read more',
+					more: 'Read more about us',
 				},
 			],
 		},
