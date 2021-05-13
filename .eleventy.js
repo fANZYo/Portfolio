@@ -24,7 +24,7 @@ module.exports = (config) => {
 
 			callback(null, compiled.css);
 		} catch (err) {
-			console.error('Terser error: ', err);
+			console.error('SASS error: ', err);
 			callback(null, code);
 		}
 	});
@@ -35,7 +35,7 @@ module.exports = (config) => {
 
 			callback(null, minified);
 		} catch (err) {
-			console.error('Terser error: ', err);
+			console.error('CleanCSS error: ', err);
 			callback(null, code);
 		}
 	});

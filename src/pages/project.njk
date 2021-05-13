@@ -1,0 +1,16 @@
+---
+layout: DefaultLayout.njk
+pagination:
+  addAllPagesToCollections: true
+  data: projects
+  size: 1
+  alias: project
+permalink: "{{project.url}}/index.html"
+renderData:
+  pageTitle: "{{project.title}}"
+---
+
+<h1>Project: {{project.title}}</h1>
+<div class="rte">
+	{{project.content}}
+</div>
