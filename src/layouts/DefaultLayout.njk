@@ -1,3 +1,7 @@
+{% set cursorJS %}
+	{% include "../js/cursor.js" %}
+{% endset %}
+
 {% set js %}
 	{% include "../js/index.js" %}
 {% endset %}
@@ -8,8 +12,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
+
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:wght@900&display=swap"
 		rel="preload"
 		as="style"
 		onload="this.onload=null;this.rel='stylesheet'"
@@ -18,8 +23,23 @@
 	<title>{{ title }}</title>
 </head>
 <body>
-	{% include "Navigation.njk" %}
-	{{ content | safe }}
+	<div class="Content js-content">
+		{% include "Navigation.njk" %}
+		{{ content | safe }}
+	</div>
+
+	<div class="Cursor">
+		<div class="Cursor__pointer js-cursor-pointer"></div>
+		<div class="Cursor__halo-wrapper js-cursor-halo">
+			<div class="Cursor__halo js-cursor-halo-inner"></div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" rel="preload" as="script"></script>
+
+	<script type="module">
+		{{ cursorJS | jsmin | safe }}
+	</script>
 
 	<script>
 		{{ js | jsmin | safe }}

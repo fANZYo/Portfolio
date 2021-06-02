@@ -1,47 +1,118 @@
+@keyframes slide_right {
+	from {
+		opacity: 0;
+		transform: translateX(-100vw);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide_left {
+	from {
+		opacity: 0;
+		transform: translateX(100vw);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
 .Header {
-	background: $dark-grey;
-	border-bottom-left-radius: 50% 25vw;
-	border-bottom-right-radius: 50% 25vw;
-	color: $white;
-	left: -25%;
-	overflow: hidden;
-	padding: em(200px) 0;
-	position: relative;
-	text-align: center;
-	width: 150%;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
 
-	&::after {
-		content: "";
+	&__illustration {
+		height: em($heading4);
+		position: relative;
+	}
+
+	&__firstname,
+	&__lastname {
 		height: 100%;
-		left: 0;
-		pointer-events: none;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		box-shadow: inset 0 -56px 56px -10px black;
 	}
 
-	&__title {
-		@include heading1;
-		margin-bottom: em(20px, $heading1);
+	&__shortname {
+		fill: $blue;
 	}
 
-	&__subline {
-		font-size: em(21px);
-		margin-bottom: em(50px);
+	&__post,
+	&__lastname {
+		stroke: $white;
 	}
 
-	&__more {
-		font-size: em(13px);
-		margin-left: em(20px, 13px);
+	&__halo {
+		fill: $blue;
+		stroke: none;
+		opacity: 0;
+		transition: 200ms;
+	}
+
+	&__name {
+		display: inline-block;
+		font-family: 'Roboto', sans-serif;
+		font-size: em($heading4);
+		line-height: 85%;
+		-webkit-text-stroke: 1px white;
 		text-transform: uppercase;
+		text-align: center;
+	}
 
-		&::after {
-			content: ' ▼';
+	&__firstname {
+		animation: 600ms slide_right ease-out;
+	}
+
+	&__lastname {
+		animation: 600ms slide_left ease-out;
+	}
+
+	@media screen and (min-width: #{$breakpoint1}) {
+		&__illustration {
+			height: em($heading3);
 		}
 	}
 
-	&__contact {
-		@include cta;
+	@media screen and (min-width: #{$breakpoint2}) {
+		&__illustration {
+			height: em($heading4);
+			transform: translate(-50%, -50%);
+		}
+
+		&__lastname {
+			left: 100%;
+			position: absolute;
+			top: 85%;
+		}
+	}
+
+	@media screen and (min-width: #{$breakpoint3}) {
+		&__illustration {
+			height: em($heading3);
+		}
+	}
+
+	@media screen and (min-width: #{$breakpoint4}) {
+		&__illustration {
+			height: em($heading2);
+		}
+	}
+
+	@media screen and (min-width: #{$breakpoint5}) {
+		&__illustration {
+			height: em($heading1);
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+		&__firstname,
+		&__lastname {
+			animation: none;
+		}
 	}
 }

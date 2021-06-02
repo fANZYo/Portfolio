@@ -1,16 +1,30 @@
 @import "./mixins";
 
+$ratio: 1.618;
 $font-size: 18px;
 
 // Colors
 $dark-grey: #23252F;
-$white: #FFF;
+$light-grey: #AAAAAA;
+$black: #101010;
+$white: #F0F0F0;
+$blue: #00F0FF;
+$yellow: #F5DF4D;
+$pink: #FF006B;
 
 // Grid
 $container-width: rem(1200px);
 
 // Headings
-$heading1: 78px;
-$heading2: 50px;
-$heading3: 18px;
-$heading4: 15px;
+$heading1: $font-size * ($ratio * 5);
+$heading2: $font-size * ($ratio * 4);
+$heading3: $font-size * ($ratio * 3);
+$heading4: $font-size * ($ratio * 2);
+$heading5: $font-size * $ratio;
+
+// Sizes
+$breakpoint1: 480px;
+$breakpoint2: 768px;
+$breakpoint3: 1024px;
+$breakpoint4: 1280px;
+$breakpoint5: 1920px;

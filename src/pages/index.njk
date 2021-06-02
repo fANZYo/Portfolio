@@ -4,16 +4,19 @@ title: userSide
 homePage: true
 ---
 
+{% set parallaxJS %}
+	{% include "../js/parallax.js" %}
+{% endset %}
+
 {% set header = homepage.header %}
 {% include "Header.njk" %}
+
+{% set about = homepage.about %}
+{% include "About.njk" %}
 
 {% set portfolio = homepage.portfolio %}
 {% include "Portfolio.njk" %}
 
-<svg width="0" height="0">
-	<defs>
-		<clipPath id="BeanClipPath" clipPathUnits="objectBoundingBox">
-			<path d="M0.638659 0.61886C0.805675 0.599537 0.899582 0.56155 0.939312 0.496428C0.979042 0.431307 1.11268 -0.0191176 0.784606 0.0248996C0.456533 0.0689168 0.127255 -0.0685617 0.0487284 0.0484433C-0.0297983 0.165448 -0.0136055 0.431307 0.0986917 0.522384C0.210989 0.613461 0.471643 0.638183 0.638659 0.61886Z" fill="#000"/>
-		</clipPath>
-	</defs>
-</svg>
+<script>
+	{{ parallaxJS | jsmin | safe }}
+</script>

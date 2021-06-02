@@ -1,21 +1,25 @@
-<section class="Portfolio">
-	<div class="Portfolio__wrapper">
-		<h2 id="portfolio" class="Portfolio__title">{{ portfolio.title }}</h2>
+{% set external %}
+	{% include "../img/external.svg" %}
+{% endset %}
 
-		<ul class="Portfolio__list">
-			{% for project in portfolio.projects %}
-				<li class="Portfolio__item">
-					<a class="Portfolio__item-link" href="{{ project.url }}">
-						<img
-							class="Portfolio__item-img js-lazy-img"
-							src="/img/placeholder.png"
-							data-srcset="{{ project.img.small }} 350w, {{ project.img.medium }} 480w, {{ project.img.large }} 720w"
-							sizes="(min-width: 721px) 20vw, (min-width: 1400px) calc(1400px / 4), 100vw"
-							alt="{{ project.img.alt }}"
-						/>
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
-	</div>
+<section class="Portfolio">
+	<ul class="Portfolio__list">
+		{% for project in portfolio.projects %}
+			<li class="Portfolio__item">
+				<div class="Portfolio__item-container">
+					<h3 class="Portfolio__item-title">
+						<a class="Portfolio__item-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+							{{ project.title }}
+						</a>
+					</h3>
+					<div>{{ external | safe }}</div>
+				</div>
+				<ul class="Portfolio__roles">
+					{% for role in project.role %}
+						<li class="Portfolio__roles-role">{{ role }}{% if not loop.last %},&nbsp;{% endif %}</li>
+					{% endfor %}
+				</ul>
+			</li>
+		{% endfor %}
+	</ul>
 </section>

@@ -1,67 +1,29 @@
 .Portfolio {
-	background: $white;
-	color: $dark-grey;
-	text-align: center;
-
-	&__wrapper {
-		padding: 2em 0;
-	}
-
-	&__title {
-		@include heading2;
-		margin-bottom: em(36px, $heading2);
-	}
-
-	&__list {
-		background: $dark-grey;
-		border-top-left-radius: 50% 25vw;
-		border-top-right-radius: 50% 25vw;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		left: -25%;
-		overflow: hidden;
-		padding: 0em 25%;
-		position: relative;
-		width: 150%;
-
-		&::after {
-			content: "";
-			height: 100%;
-			left: 0;
-			pointer-events: none;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			box-shadow: inset 0 56px 56px -10px black;
-		}
-	}
+	padding: em(70px) em(30px);
 
 	&__item {
-		flex: 0 0 32%;
-		margin-bottom: 2%;
-		position: relative;
+		margin-bottom: em(30px);
+	}
 
-		&-link {
-			display: block;
-			padding-top: calc(3/4 * 100%);
-			position: relative;
-		}
+	&__item-container {
+		align-items: center;
+		display: flex;
+	}
 
-		&-title {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+	&__item-title {
+		font-family: 'Roboto', sans-serif;
+		font-size: em($heading3);
+		margin-right: em(20px, $heading3);
+		text-transform: uppercase;
+	}
 
-		&-img {
-			clip-path: url(#BeanClipPath);
-			left: 50%;
-			position: absolute;
-			top: 0;
-			transform: translateX(-50%);
-			width: 100%;
-			height: 100%;
-		}
+	&__item-link {
+		color: transparent;
+		-webkit-text-stroke: 1px white;
+	}
+
+	&__roles-role {
+		display: inline-block;
+		color: $light-grey;
 	}
 }
