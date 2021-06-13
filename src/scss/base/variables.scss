@@ -4,13 +4,12 @@ $ratio: 1.618;
 $font-size: 18px;
 
 // Colors
-$dark-grey: #23252F;
-$light-grey: #AAAAAA;
-$black: #101010;
-$white: #F0F0F0;
-$blue: #00F0FF;
-$yellow: #F5DF4D;
-$pink: #FF006B;
+$white: hsl(0, 0%, 99%);
+$black: hsl(0, 0%, 9%);
+$dark-gray: hsl(0, 0%, 11%);
+$light-gray: hsl(197, 9%, 89%);
+$turquoise: hsl(185, 100%, 50%);
+$blue: hsl(234, 61%, 50%);
 
 // Grid
 $container-width: rem(1200px);

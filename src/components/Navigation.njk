@@ -1,16 +1,9 @@
-<div class="Navigation">
-	<a class="Navigation__logo" href="/">LOGO</a>
-	<nav class="Navigation__nav">
-		<ul class="Navigation__list">
-			<li class="Navigation__item {% if homePage %}Navigation__item--active{% endif %}">
-				<a href="/">home</a>
+<nav>
+	<ul>
+		{% for item in navigation.items %}
+			<li>
+				<a href="{{ item.url }}">{{ item.label }}</a>
 			</li>
-			<li class="Navigation__item {% if aboutPage %}Navigation__item--active{% endif %}">
-				<a href="/about">about</a>
-			</li>
-			<li class="Navigation__item {% if contactPage %}Navigation__item--active{% endif %}">
-				<a href="/contact">contact</a>
-			</li>
-		</ul>
-	</nav>
-</div>
+		{% endfor %}
+	</ul>
+</nav>

@@ -20,7 +20,6 @@ const criticalCSS = () => {
 				inline: true,
 				width: 1300,
 				height: 900,
-				minify: true,
 				ignore: {
 					atrule: ['@font-face'],
 				},

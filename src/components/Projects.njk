@@ -1,0 +1,17 @@
+<section class="Projects">
+	<h2>{{ projects.title }}</h2>
+
+	<ul>
+		{% for project in projects.items %}
+			<li>
+				<div>
+					<img src="" alt="">
+				</div>
+				<div>
+					<h3>{{ project.title }}</h3>
+					<p>{{ project.blurb }}</p>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+</section>

@@ -3,20 +3,18 @@ const projects = require('./projects');
 module.exports = () => {
 	return {
 		header: {
-			title: 'Creating for the users', // The WHY
-			subline: 'Making something your users will love to use, no matter who your users are.',
-			ctas: {
-				more: 'Read more',
-				talk: 'Let\'s talk!',
-			},
+			title: 'Ensuring Seamless Experiences',
+			titleHL: 'For Everyone',
+			blurb: 'Hi, I\'m William — a freelance Web UI engineer.<br/>I help companies and organizations create modern, inclusive, and resilient web user interfaces and design systems with a strong focus on accessibility, performance, and maintainability.',
 		},
-		blurb: {
-			title: 'The how', // The HOW
-
+		projects: {
+			title: 'Selected work',
+			items: projects(),
 		},
-		portfolio: {
-			title: 'Check our work', // The WHAT
-			projects: projects(),
+		subscribe: {
+			title: 'Subscribe',
+			label: 'Get <em>Accessibility</em> and <em>Performance</em> tips',
+			placeholder: 'Email',
 		},
 	};
 };

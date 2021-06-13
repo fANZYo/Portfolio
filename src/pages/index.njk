@@ -1,22 +1,16 @@
 ---
 layout: DefaultLayout.njk
-title: userSide
+title: William IEHL | Home
 homePage: true
 ---
 
-{% set parallaxJS %}
-	{% include "../js/parallax.js" %}
-{% endset %}
+<main id="main-content">
+	{% set header = homepage.header %}
+	{% include "Header.njk" %}
 
-{% set header = homepage.header %}
-{% include "Header.njk" %}
+	{% set projects = homepage.projects %}
+	{% include "Projects.njk" %}
+</main>
 
-{% set about = homepage.about %}
-{% include "About.njk" %}
-
-{% set portfolio = homepage.portfolio %}
-{% include "Portfolio.njk" %}
-
-<script>
-	{{ parallaxJS | jsmin | safe }}
-</script>
+{% set subscribe = homepage.subscribe %}
+{% include "Subscribe.njk" %}
