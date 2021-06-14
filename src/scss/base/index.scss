@@ -16,12 +16,40 @@
 	--turquoise: hsl(185, 100%, 50%);
 	--blue: hsl(234, 61%, 50%);
 
-	// Headings
-	--heading5: calc(var(--font-size) * var(--ratio));
-	--heading4: calc(var(--heading5) * var(--ratio));
-	--heading3: calc(var(--heading4) * var(--ratio));
-	--heading2: calc(var(--heading3) * var(--ratio));
-	--heading1: calc(var(--heading2) * var(--ratio));
+	// // Headings
+	// --heading5: calc(var(--font-size) * var(--ratio));
+	// --heading4: calc(var(--heading5) * var(--ratio));
+	// --heading3: calc(var(--heading4) * var(--ratio));
+	// --heading2: calc(var(--heading3) * var(--ratio));
+	// --heading1: calc(var(--heading2) * var(--ratio));
+
+	@media (prefers-color-scheme: light) {
+		--background: var(--white);
+		--color: var(--black);
+		--highlight: var(--blue);
+		--link-color: var(--blue);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		--background: var(--black);
+		--color: var(--white);
+		--highlight: var(--turquoise);
+		--link-color: var(--turquoise);
+	}
+}
+
+html[data-theme='light'] {
+	--background: var(--white);
+	--color: var(--black);
+	--highlight: var(--blue);
+	--link-color: var(--blue);
+}
+
+html[data-theme='dark'] {
+	--background: var(--black);
+	--color: var(--white);
+	--highlight: var(--turquoise);
+	--link-color: var(--turquoise);
 }
 
 *, *::before, *::after {
@@ -33,8 +61,13 @@ html {
 	font-family: 'Poppins', sans-serif;
 }
 
+body {
+	background-color: var(--background);
+	color: var(--color)
+}
+
 a {
-	color: inherit;
+	color: var(--link-color);
 	text-decoration: none;
 }
 

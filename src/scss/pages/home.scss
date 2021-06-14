@@ -1,5 +1,3 @@
-@import '../components/Header.scss';
-
 .sr-only {
 	position:absolute;
 	left:-10000px;
@@ -8,3 +6,6 @@
 	height:1px;
 	overflow:hidden;
 }
+
+@import '../components/Header.scss';
+@import '../components/Projects.scss';

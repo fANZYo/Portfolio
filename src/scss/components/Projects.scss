@@ -1,0 +1,33 @@
+.Projects {
+	&__title {
+		font-weight: 700;
+		margin-bottom: em(15px);
+		padding: 0 em(15px);
+	}
+
+	&__item {
+	}
+
+	&__illustration {
+		position: relative;
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__item-content {
+		background: var(--background);
+		padding: em(10px);
+	}
+
+	&__item-title {
+		@include heading4;
+
+		margin-bottom: em(15px, $heading4);
+	}
+
+	&__item-blurb {
+		padding-left: em(20px);
+	}
+}

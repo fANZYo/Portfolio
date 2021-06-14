@@ -7,7 +7,7 @@
 		display: block;
 		margin-bottom: em(20px);
 		overflow: hidden;
-		padding-top: calc(3/4 * 80%);
+		padding-top: calc(2.5/4 * 80%);
 		position: relative;
 	}
 
@@ -25,13 +25,12 @@
 	&__title {
 		@include heading5;
 
-		line-height: 90%;
-		margin-bottom: em(20px, $heading5);
+		margin-bottom: em(15px, $heading5);
 		word-spacing: 999em;
 	}
 
 	&__highlight {
-		color: var(--blue);
+		color: var(--highlight);
 		word-spacing: initial;
 	}
 }

@@ -15,11 +15,11 @@ $blue: hsl(234, 61%, 50%);
 $container-width: rem(1200px);
 
 // Headings
-$heading1: $font-size * ($ratio * 5);
-$heading2: $font-size * ($ratio * 4);
-$heading3: $font-size * ($ratio * 3);
-$heading4: $font-size * ($ratio * 2);
 $heading5: $font-size * $ratio;
+$heading4: $heading5 * $ratio;
+$heading3: $heading4 * $ratio;
+$heading2: $heading3 * $ratio;
+$heading1: $heading2 * $ratio;
 
 // Sizes
 $breakpoint1: 480px;
