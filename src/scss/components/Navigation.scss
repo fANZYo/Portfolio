@@ -1,2 +1,13 @@
 .Navigation {
+	margin-bottom: em(20px);
+	padding: em(15px) em(15px) 0 0;
+
+	&__item {
+		font-size: em(14px);
+		font-weight: 600;
+		letter-spacing: 0.34em;
+		margin-bottom: em(10px, 14px);
+		text-align: right;
+		text-transform: uppercase;
+	}
 }

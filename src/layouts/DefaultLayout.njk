@@ -1,3 +1,7 @@
+{% set js %}
+	{% include "../js/index.js" %}
+{% endset %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
 	<meta name="description" content="">
 
 	<link
-		href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
 		rel="preload"
 		as="style"
 		onload="this.onload=null;this.rel='stylesheet'"
@@ -15,7 +19,7 @@
 	<title>{{ title }}</title>
 </head>
 <body>
-	<div class="Content js-content">
+	<div class="Content">
 		{% include "Navigation.njk" %}
 
 		{{ content | safe }}
@@ -24,5 +28,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" rel="preload" as="script"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" rel="preload" as="script"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" rel="preload" as="script"></script>
+
+	<script>
+		{{ js | jsmin | safe }}
+	</script>
 </body>
 </html>

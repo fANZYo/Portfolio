@@ -6,6 +6,11 @@ module.exports = () => {
 			title: 'Ensuring Seamless Experiences',
 			titleHL: 'For Everyone',
 			blurb: 'Hi, I\'m William — a freelance Web UI engineer.<br/>I help companies and organizations create modern, inclusive, and resilient web user interfaces and design systems with a strong focus on accessibility, performance, and maintainability.',
+			img: {
+				large: 'assets/self-portrait.webp',
+				small: 'assets/self-landscape.webp',
+				alt: "A portrait picture of William",
+			},
 		},
 		projects: {
 			title: 'Selected work',

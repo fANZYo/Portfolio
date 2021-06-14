@@ -1,0 +1,37 @@
+@import '../base/variables.scss';
+
+.Header {
+	margin-bottom: em(20px);
+
+	&__picture {
+		display: block;
+		margin-bottom: em(20px);
+		overflow: hidden;
+		padding-top: calc(3/4 * 80%);
+		position: relative;
+	}
+
+	&__img {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+	}
+
+	&__content {
+		padding: 0 em(15px);
+	}
+
+	&__title {
+		@include heading5;
+
+		line-height: 90%;
+		margin-bottom: em(20px, $heading5);
+		word-spacing: 999em;
+	}
+
+	&__highlight {
+		color: var(--blue);
+		word-spacing: initial;
+	}
+}

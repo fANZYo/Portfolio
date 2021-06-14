@@ -2,8 +2,44 @@
 @import './mixins.scss';
 @import './reset.scss';
 
+:root {
+
+	--ratio: 1.618;
+	--font-size: 16px;
+	--line-height: 1.618;
+
+	// Colors
+	--white: hsl(0, 0%, 99%);
+	--black: hsl(0, 0%, 9%);
+	--dark-gray: hsl(0, 0%, 11%);
+	--light-gray: hsl(197, 9%, 89%);
+	--turquoise: hsl(185, 100%, 50%);
+	--blue: hsl(234, 61%, 50%);
+
+	// Headings
+	--heading5: calc(var(--font-size) * var(--ratio));
+	--heading4: calc(var(--heading5) * var(--ratio));
+	--heading3: calc(var(--heading4) * var(--ratio));
+	--heading2: calc(var(--heading3) * var(--ratio));
+	--heading1: calc(var(--heading2) * var(--ratio));
+}
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
 
-@import './base.scss';
+html {
+	font-size: var(--font-size);
+	font-family: 'Poppins', sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+p {
+	line-height: var(--line-height);
+}
+
+@import '../components/Navigation.scss';

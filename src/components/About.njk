@@ -1,0 +1,15 @@
+<section>
+	<h2>{{ about.title }}</h2>
+
+	<div>
+		<picture>
+			<source media="(max-width: 799px)" srcset="{{ about.img.small }}">
+			<source media="(min-width: 800px)" srcset="{{ about.img.large }}">
+			<img src="{{ about.img.small }}" alt="{{ about.img.alt }}">
+		</picture>
+	</div>
+
+	<div class="rte">
+		{{ about.content | safe }}
+	</div>
+</section>
