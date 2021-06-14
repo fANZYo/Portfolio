@@ -8,7 +8,7 @@ module.exports = () => {
 			blurb: 'Hi, I\'m William — a freelance Web UI engineer.<br/>I help companies and organizations create modern, inclusive, and resilient web user interfaces and design systems with a strong focus on accessibility, performance, and maintainability.',
 			img: {
 				large: 'assets/self-portrait.jpg',
-				small: 'assets/self-landscape.jpg',
+				small: 'assets/self-landscape.jpg?nf_resize=fit&w=360',
 				alt: "A portrait picture of William",
 			},
 		},
