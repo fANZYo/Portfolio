@@ -8,7 +8,9 @@ module.exports = (config) => {
 	config.addWatchTarget('./src/js/');
 	config.addWatchTarget('./src/scss/');
 	config.addWatchTarget('./src/img/');
+	config.addWatchTarget('./static/assets/');
 	config.addPassthroughCopy({ 'src/img': 'assets' });
+	config.addPassthroughCopy({ 'static/assets': 'assets' });
 
 	config.on('beforeBuild', () => {
 		 preBuild(); 
