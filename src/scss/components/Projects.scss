@@ -1,4 +1,6 @@
 .Projects {
+	padding-top: em(20px);
+
 	&__title {
 		font-weight: 700;
 		margin-bottom: em(15px);
@@ -22,9 +24,10 @@
 	}
 
 	&__item-title {
-		@include heading4;
+		$font-size: 42px;
 
-		margin-bottom: em(15px, $heading4);
+		font-size: $font-size;
+		margin-bottom: em(15px, $font-size);
 	}
 
 	&__item-blurb {

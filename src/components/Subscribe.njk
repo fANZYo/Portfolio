@@ -1,10 +1,14 @@
-<section>
+<section class="Subscribe">
 	<h2 class="sr-only">{{ subscribe.title }}</h2>
 
-	<form>
-		<label for="subscribe-input">{{ subscribe.label | safe }}</label>
-		<input id="subscribe-input" type="email" />
+	<form class="Subscribe__form">
+		<label class="Subscribe__label" for="subscribe-input">{{ subscribe.label | safe }}</label>
 
-		<button type="submit">-&gt;</button>
+		<div class="Subscribe__field">
+			<input id="subscribe-input" class="Subscribe__input" placeholder="Email" type="text" autocomplete="email" />
+			<button class="Subscribe__submit" type="submit" aria-label="Submit">
+				{% include "../img/arrow.svg" %}
+			</button>
+		</div>
 	</form>
 </section>

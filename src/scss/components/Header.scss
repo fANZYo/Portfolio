@@ -1,11 +1,9 @@
 @import '../base/variables.scss';
 
 .Header {
-	margin-bottom: em(20px);
-
 	&__picture {
 		display: block;
-		margin-bottom: em(20px);
+		margin-bottom: em(30px);
 		overflow: hidden;
 		padding-top: calc(2.5/4 * 80%);
 		position: relative;
@@ -23,10 +21,15 @@
 	}
 
 	&__title {
-		@include heading5;
+		$font-size: 34px;
 
-		margin-bottom: em(15px, $heading5);
+		font-size: em($font-size);
+		margin-bottom: em(15px, $font-size);
 		word-spacing: 999em;
+
+		@media (min-width: 345px) {
+			font-size: em(42px);
+		}
 	}
 
 	&__highlight {

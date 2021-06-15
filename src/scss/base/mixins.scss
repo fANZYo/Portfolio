@@ -1,38 +1,3 @@
-@mixin heading1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: em($heading1);
-  font-weight: 700;
-	text-transform: uppercase;
-}
-
-@mixin heading2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: em($heading2);
-  font-weight: 700;
-	text-transform: uppercase;
-}
-
-@mixin heading3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: em($heading3);
-  font-weight: 700;
-	text-transform: uppercase;
-}
-
-@mixin heading4 {
-  font-family: 'Poppins', sans-serif;
-  font-size: em($heading4);
-  font-weight: 700;
-	text-transform: uppercase;
-}
-
-@mixin heading5 {
-  font-family: 'Poppins', sans-serif;
-  font-size: em($heading5);
-  font-weight: 700;
-	text-transform: uppercase;
-}
-
 @function em($size, $context: $font-size) {
 	@if $size == 0 { @return 0; }
 

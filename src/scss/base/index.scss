@@ -3,7 +3,6 @@
 @import './reset.scss';
 
 :root {
-
 	--ratio: 1.618;
 	--font-size: 16px;
 	--line-height: 1.618;
@@ -16,12 +15,12 @@
 	--turquoise: hsl(185, 100%, 50%);
 	--blue: hsl(234, 61%, 50%);
 
-	// // Headings
-	// --heading5: calc(var(--font-size) * var(--ratio));
-	// --heading4: calc(var(--heading5) * var(--ratio));
-	// --heading3: calc(var(--heading4) * var(--ratio));
-	// --heading2: calc(var(--heading3) * var(--ratio));
-	// --heading1: calc(var(--heading2) * var(--ratio));
+	// Headings
+	--heading5: calc(var(--font-size) * var(--ratio));
+	--heading4: calc(var(--heading5) * var(--ratio));
+	--heading3: calc(var(--heading4) * var(--ratio));
+	--heading2: calc(var(--heading3) * var(--ratio));
+	--heading1: calc(var(--heading2) * var(--ratio));
 
 	@media (prefers-color-scheme: light) {
 		--background: var(--white);
@@ -64,6 +63,11 @@ html {
 body {
 	background-color: var(--background);
 	color: var(--color)
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 a {
