@@ -1,39 +1,134 @@
-@import '../base/variables.scss';
-
 .Header {
-	&__picture {
-		display: block;
-		margin-bottom: em(30px);
-		overflow: hidden;
-		padding-top: calc(2.5/4 * 80%);
-		position: relative;
-	}
-
-	&__img {
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
+	@media screen and (min-width: 720px) {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		min-height: 100vh;
 	}
 
 	&__content {
-		padding: 0 em(15px);
-	}
+		max-width: 72rem;
 
-	&__title {
-		$font-size: 34px;
-
-		font-size: em($font-size);
-		margin-bottom: em(15px, $font-size);
-		word-spacing: 999em;
-
-		@media (min-width: 345px) {
-			font-size: em(42px);
+		@media screen and (min-width: 900px) {
+			max-width: 90rem;
 		}
 	}
 
-	&__highlight {
-		color: var(--highlight);
-		word-spacing: initial;
+	&__title {
+		background: var(--background-offset);
+		border-top-left-radius: var(--border-radius);
+		border-bottom-left-radius: var(--border-radius);
+		margin: 0 0 1.5rem auto;
+		padding: 2rem;
+		position: relative;
+		width: fit-content;
+		z-index: 1;
+
+		@media screen and (max-width: 374px) {
+			font-size: 3.6rem;
+		}
+
+		@media screen and (min-width: 375px) and (max-width: 424px) {
+			font-size: 4rem;
+		}
+
+		@media screen and (min-width: 425px) and (max-width: 499px) {
+			font-size: 4.2rem;
+		}
+
+		@media screen and (min-width: 500px) and (max-width: 599px) {
+			font-size: 4.8rem;
+		}
+
+		@media screen and (min-width: 600px) and (max-width: 899px) {
+			font-size: 6.4rem;
+			margin: 0 auto 2rem 2rem;
+		}
+
+		@media screen and (min-width: 720px) {
+			border-radius: var(--border-radius);
+		}
+
+		@media screen and (min-width: 900px) {
+			font-size: 7.6rem;
+			line-height: 90%;
+			margin: 0 auto 2rem 3.5rem;
+			padding: 3rem;
+		}
+	}
+
+	&__keyword {
+		display: block;
+
+		&:last-of-type {
+			color: var(--highlight);
+		}
+	}
+
+	&__blurb {
+		background: var(--background-contrast);
+		border-top-right-radius: var(--border-radius);
+		border-bottom-right-radius: var(--border-radius);
+		color: var(--background);
+		padding: 2rem;
+		position: relative;
+		z-index: 1;
+
+		@media screen and (max-width: 599px) {
+			width: 90%;
+		}
+
+		@media screen and (min-width: 600px) and (max-width: 719px) {
+			width: 80%;
+		}
+
+		@media screen and (min-width: 720px) {
+			border-radius: var(--border-radius);
+			width: 70%;
+		}
+
+		@media screen and (min-width: 900px) {
+			padding: 3rem;
+		}
+	}
+
+	&__picture {
+		border: 2px solid var(--color);
+		border-radius: var(--border-radius);
+		box-sizing: content-box;
+		display: block;
+		margin: -5rem 0 1.5rem auto;
+		overflow: hidden;
+		position: relative;
+
+		@media screen and (max-width: 599px) {
+			padding-top: 70%;
+			width: 70%;
+		}
+
+		@media screen and (min-width: 600px) and (max-width: 719px) {
+			padding-top: 60%;
+			width: 60%;
+		}
+
+		@media screen and (min-width: 720px) and (max-width: 899px) {
+			margin-top: -25rem;
+		}
+
+		@media screen and (min-width: 720px) {
+			padding-top: calc(4/3.5 * 34%);
+			width: 34%;
+		}
+
+		@media screen and (min-width: 900px) {
+			margin-top: -32rem;
+		}
+	}
+
+	&__img {
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
 	}
 }

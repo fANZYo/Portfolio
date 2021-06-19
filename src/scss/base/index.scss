@@ -3,15 +3,17 @@
 @import './reset.scss';
 
 :root {
+	font-size: 62.5%;
+
 	--ratio: 1.618;
-	--font-size: 16px;
+	--font-size: 1.4rem;
 	--line-height: 1.618;
 
 	// Colors
 	--white: hsl(0, 0%, 99%);
 	--black: hsl(0, 0%, 9%);
-	--dark-gray: hsl(0, 0%, 11%);
-	--light-gray: hsl(197, 9%, 89%);
+	--dark-gray: hsl(231, 15%, 18%);
+	--light-gray: hsl(180, 11%, 93%);
 	--turquoise: hsl(185, 100%, 50%);
 	--blue: hsl(234, 61%, 50%);
 
@@ -22,8 +24,13 @@
 	--heading2: calc(var(--heading3) * var(--ratio));
 	--heading1: calc(var(--heading2) * var(--ratio));
 
+	// Misc
+	--border-radius: 5px;
+
 	@media (prefers-color-scheme: light) {
 		--background: var(--white);
+		--background-offset: var(--light-gray);
+		--background-contrast: var(--dark-gray);
 		--color: var(--black);
 		--highlight: var(--blue);
 		--link-color: var(--blue);
@@ -31,9 +38,19 @@
 
 	@media (prefers-color-scheme: dark) {
 		--background: var(--black);
+		--background-offset: var(--dark-gray);
+		--background-contrast: var(--light-gray);
 		--color: var(--white);
 		--highlight: var(--turquoise);
 		--link-color: var(--turquoise);
+	}
+
+	@media (min-width: 425px) {
+		--font-size: 1.6rem;
+	}
+
+	@media (min-width: 900px) {
+		--font-size: 1.8rem;
 	}
 }
 
@@ -56,13 +73,13 @@ html[data-theme='dark'] {
 }
 
 html {
-	font-size: var(--font-size);
 	font-family: 'Poppins', sans-serif;
 }
 
 body {
 	background-color: var(--background);
-	color: var(--color)
+	color: var(--color);
+	font-size: var(--font-size);
 }
 
 h1, h2, h3, h4, h5, h6 {

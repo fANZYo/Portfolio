@@ -12,10 +12,6 @@
 		padding: em(4.5px, $font-size);
 		text-align: right;
 		text-transform: uppercase;
-
-		&:first-of-type {
-			display: none;
-		}
 	}
 
 	&__link {
