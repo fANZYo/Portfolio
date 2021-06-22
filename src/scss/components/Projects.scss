@@ -1,5 +1,7 @@
 .Projects {
 	padding-top: 2rem;
+	margin: 0 auto;
+	max-width: 120rem;
 
 	&__title {
 		font-weight: 700;
@@ -8,35 +10,52 @@
 	}
 
 	&__item {
-		@media screen and (min-width: 500px) {
-			margin-bottom: 3rem;
+		margin-bottom: 3rem;
+		position: relative;
+
+		@media screen and (min-width: 720px) {
+			margin-bottom: 10rem;
+		}
+	}
+
+	&__item-title {
+		background: var(--background-offset);
+		border: 1px solid var(--color);
+		border-radius: var(--border-radius);
+		display: inline-block;
+		font-size: 3.6rem;
+		padding: 1rem;
+		position: relative;
+		z-index: 2;
+
+		@media screen and (min-width: 720px) {
+			position: absolute;
+			left: 0;
+			top: 2rem;
 		}
 	}
 
 	&__illustration {
+		border: 1px solid var(--color);
+		border-radius: var(--border-radius);
+		margin: -4rem 0 0 auto;
 		overflow: hidden;
-		border-top-right-radius: var(--border-radius);
-		border-bottom-right-radius: var(--border-radius);
+		padding-top: calc(10/16 * (100% - 2rem));
 		position: relative;
+		width: calc(100% - 2rem);
 
-		@media screen and (max-width: 374px) {
-			padding-top: calc(4/3.5 * 95%);
-			width: 95%;
+		@media screen and (min-width: 720px) {
+			display: inline-block;
+			margin: 0;
+			margin-left: 2rem;
+			padding-top: calc(10/16 * 36rem);
+			vertical-align: top;
+			width: 36rem;
 		}
 
-		@media screen and (min-width: 375px) and (max-width: 499px) {
-			padding-top: calc(4/3.5 * 90%);
-			width: 90%;
-		}
-
-		@media screen and (min-width: 500px) and (max-width: 899px) {
-			padding-top: calc(10/16 * 90%);
-			width: 90%;
-		}
-
-		@media screen and (min-width: 900px) {
-			padding-top: calc(7/16 * 90%);
-			width: 90%;
+		@media screen and (min-width: 1100px) {
+			padding-top: calc(10/16 * 45rem);
+			width: 45rem;
 		}
 	}
 
@@ -47,45 +66,49 @@
 		width: 100%;
 	}
 
-	&__item-content {
-		background: var(--background-offset);
-		border-top-left-radius: var(--border-radius);
-		border-bottom-left-radius: var(--border-radius);
-		max-width: 70rem;
-		padding: 2rem;
-		position: relative;
-		z-index: 1;
-
-		@media screen and (max-width: 374px) {
-			margin: -5rem 0 1.5rem auto;
-			width: 95%;
+	&__content {
+		@media screen and (min-width: 720px) {
+			display: inline-block;
+			margin-left: 2rem;
+			padding-top: 0.5rem;
+			vertical-align: top;
+			width: calc(100% - 40rem); // Full width - image width + image position
 		}
 
-		@media screen and (min-width: 375px) {
-			width: 90%;
-		}
-
-		@media screen and (min-width: 375px) and (max-width: 424px) {
-			margin: -10rem 0 1.5rem auto;
-		}
-
-		@media screen and (min-width: 425px) and (max-width: 499px) {
-			margin: -15rem 0 1.5rem auto;
-		}
-
-		@media screen and (min-width: 500px) and (max-width: 899px) {
-			margin: -10rem auto 1.5rem auto;
-		}
-
-		@media screen and (min-width: 900px) {
-			margin: -10rem 15% 1.5rem auto;
-			border-radius: var(--border-radius);
-			width: 60rem;
+		@media screen and (min-width: 1000px) {
+			width: calc(100% - 49rem); // Full width - image width + image position
 		}
 	}
 
-	&__item-title {
-		font-size: 4.2rem;
-		margin-bottom: 1.5rem;
+	&__item-blurb {
+		margin-left: auto;
+		margin-right: 0;
+		padding: 1rem;
+		padding-left: 0.5rem;
+		padding-bottom: 0;
+		width: calc(100% - 2rem);
+
+		@media screen and (min-width: 720px) {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&__item-link {
+		display: inline-block;
+		margin-left: 2.5rem;
+		padding: 1rem;
+		padding-left: 0;
+
+		@media screen and (min-width: 720px) {
+			margin-left: 0;
+		}
+	}
+
+	&__item-external {
+		height: 1em;
+		margin-left: 0.5rem;
+		stroke: var(--link-color);
+		width: 1em;
 	}
 }
