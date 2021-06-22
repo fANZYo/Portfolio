@@ -2,8 +2,12 @@
 	background: var(--color);
 	padding: em(40px) em(20px);
 
-	&__form {
+	@media screen and (min-width: 1100px) {
+		max-width: calc(100% - 6rem - 4.5rem);
+	}
 
+	&__form {
+		max-width: 90rem;
 	}
 
 	&__label {
