@@ -56,6 +56,8 @@
 
 html[data-theme='light'] {
 	--background: var(--white);
+	--background-offset: var(--light-gray);
+	--background-contrast: var(--dark-gray);
 	--color: var(--black);
 	--highlight: var(--blue);
 	--link-color: var(--blue);
@@ -63,6 +65,8 @@ html[data-theme='light'] {
 
 html[data-theme='dark'] {
 	--background: var(--black);
+	--background-offset: var(--dark-gray);
+	--background-contrast: var(--light-gray);
 	--color: var(--white);
 	--highlight: var(--turquoise);
 	--link-color: var(--turquoise);
@@ -73,8 +77,9 @@ html[data-theme='dark'] {
 }
 
 *:focus {
-	outline-width: 3px;
-	outline-color: var(--color);
+	outline: none;
+	box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--color);
+	border-radius: 1px;
 }
 
 html {
@@ -144,6 +149,7 @@ strong {
 
 .flying-focus-target {
 	outline: none !important;
+	box-shadow: none !important;
 }
 
 .flying-focus-target::-moz-focus-inner {
