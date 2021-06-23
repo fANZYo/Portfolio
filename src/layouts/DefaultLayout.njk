@@ -8,6 +8,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script>
+		const theme = window.localStorage.getItem('WI_theme');
+		document.documentElement.setAttribute('data-theme', theme);
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
@@ -17,11 +21,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 	<link href="/css/styles.css" rel="stylesheet">
 	<title>{{ title }}</title>
-
-	<script>
-		const theme = window.localStorage.getItem('WI_theme');
-		document.documentElement.setAttribute('data-theme', theme);
-	</script>
 </head>
 <body>
 	{% include "SkipNav.njk" %}
