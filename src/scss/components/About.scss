@@ -19,7 +19,7 @@
 		position: relative;
 		width: 80%;
 
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: 600px) and (max-width: 999px) {
 			padding-top: calc(3/4 * 50rem);
 			width: 50rem;
 		}
@@ -27,6 +27,8 @@
 		@media screen and (min-width: 1000px) {
 			float: right;
 			margin-left: 2rem;
+			padding-top: calc(4/3 * 50rem);
+			width: 50rem;
 		}
 	}
 

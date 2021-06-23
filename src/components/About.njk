@@ -2,7 +2,8 @@
 	<h2 class="About__title">{{ about.title }}</h2>
 
 	<picture class="About__picture">
-		<source media="screen" srcset="{{ about.img.small }}">
+		<source media="(max-width: 999px)" srcset="{{ about.img.small }}">
+		<source media="(min-width: 1000px)" srcset="{{ about.img.large }}">
 		<img class="About__img" src="{{ about.img.small }}" alt="{{ about.img.alt }}">
 	</picture>
 
