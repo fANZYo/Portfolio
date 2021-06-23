@@ -15,15 +15,18 @@ const lazyIMG = (imgs) => {
 const initThemeToggle = () => {
 	const toggler = document.querySelector('.js-contrast');
 
-	let darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	let darkMode = window.localStorage.getItem('WI_theme') === 'dark'
+		|| window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 	const setTheme = () => {
 		if (darkMode) {
 			document.documentElement.setAttribute('data-theme', 'dark');
 			toggler.setAttribute('aria-label', 'Switch to light mode');
+			window.localStorage.setItem('WI_theme', 'dark');
 		} else {
 			document.documentElement.setAttribute('data-theme', 'light');
 			toggler.setAttribute('aria-label', 'Switch to dark mode');
+			window.localStorage.setItem('WI_theme', 'light');
 		}
 	}
 
@@ -32,8 +35,6 @@ const initThemeToggle = () => {
 
 		setTheme();
 	});
-
-	setTheme();
 };
 
 const initHamburgerMenu = () => {
