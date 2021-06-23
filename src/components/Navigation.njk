@@ -6,4 +6,25 @@
 			</li>
 		{% endfor %}
 	</ul>
+
+	{% set className = "Navigation__social-svg" %}
+	{% set classCircle = "Navigation__social-circle" %}
+	{% set classIcon = "Navigation__social-icon" %}
+	<ul class="Navigation__socials">
+		<li class="Navigation__social-item">
+			<a class="Navigation__social-link" href="mailto:www.iehl@gmail.com" aria-label="Contact Email">
+				{% include "../img/email.svg" %}
+			</a>
+		</li>
+		<li class="Navigation__social-item">
+			<a class="Navigation__social-link" href="https://twitter.com/www_iehl" aria-label="Contact Twitter">
+				{% include "../img/twitter.svg" %}
+			</a>
+		</li>
+		<li class="Navigation__social-item">
+			<a class="Navigation__social-link" href="https://www.linkedin.com/in/william-iehl/" aria-label="Contact LinkedIn">
+				{% include "../img/linkedin.svg" %}
+			</a>
+		</li>
+	</ul>
 </nav>

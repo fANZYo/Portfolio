@@ -21,7 +21,7 @@ module.exports = () => {
 			items: projects(),
 		},
 		subscribe: {
-			title: 'Subscribe',
+			title: 'Newsletter & Contacts',
 			label: 'Get <em>Accessibility</em> and <em>Performance</em> tips',
 			placeholder: 'Email',
 		},

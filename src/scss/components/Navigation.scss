@@ -1,15 +1,18 @@
 .Navigation {
-	margin-bottom: em(20px);
-	padding: em(7.5px);
+	margin-bottom: 2rem;
+	padding: 0.75rem;
 	padding-bottom: 0;
 
-	$font-size: 13px;
+	@media screen and (min-width: 1100px) {
+		position: fixed;
+		right: 0;
+	}
 
 	&__item {
-		font-size: em($font-size);
+		font-size: 1.3rem;
 		font-weight: 600;
 		letter-spacing: 0.34em;
-		padding: em(4.5px, $font-size);
+		padding: 0.45rem;
 		text-align: right;
 		text-transform: uppercase;
 	}
@@ -17,6 +20,29 @@
 	&__link {
 		color: var(--color);
 		display: inline-block;
-		padding: em(4.5px, $font-size);
+		padding: 0.45rem;
+	}
+
+	&__socials {
+		bottom: 1.6rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: calc(4.5rem * 4);
+		position: fixed;
+		right: 1.6rem;
+	}
+
+	&__social-link {
+		display: block;
+		font-size: 0;
+	}
+
+	&__social-circle {
+		stroke: var(--color);
+	}
+
+	&__social-icon {
+		fill: var(--color);
 	}
 }

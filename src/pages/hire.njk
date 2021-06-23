@@ -4,12 +4,9 @@ title: William IEHL | Hire Me
 permalink: "/hire-me/index.html"
 ---
 
-<main id="main-content">
-	<section>
-		<h2>{{ hire.title }}</h2>
-
-		<div class="rte">
-			{{ hire.content | safe }}
-		</div>
-	</section>
+<main id="main-content" tabindex="-1">
+	{% include "Hire.njk" %}
 </main>
+
+{% set subscribe = homepage.subscribe %}
+{% include "Subscribe.njk" %}

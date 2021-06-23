@@ -6,7 +6,7 @@
 			<li class="Projects__item">
 				<h3 class="Projects__item-title">{{ project.title }}</h3>
 				<div class="Projects__illustration">
-					<img class="Projects__img js-lazy-img" src="/assets/placeholder.png" data-srcset="https://placekitten.com/300/400" alt="cat">
+					<img class="Projects__img js-lazy-img" src="/assets/placeholder.png" data-srcset="{{ project.img.medium }}" alt="cat">
 				</div>
 				<div class="Projects__content">
 					<p class="Projects__item-blurb">{{ project.blurb }}</p>

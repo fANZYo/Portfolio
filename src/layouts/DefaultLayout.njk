@@ -1,3 +1,6 @@
+{% set flyingFocus %}
+	{% include "../js/flyingFocus.js" %}
+{% endset %}
 {% set js %}
 	{% include "../js/index.js" %}
 {% endset %}
@@ -16,6 +19,8 @@
 	<title>{{ title }}</title>
 </head>
 <body>
+	{% include "SkipNav.njk" %}
+
 	<div class="Content">
 		{% include "Navigation.njk" %}
 
@@ -24,6 +29,9 @@
 
 	<script>
 		{{ js | jsmin | safe }}
+	</script>
+	<script>
+		{{ flyingFocus | jsmin | safe }}
 	</script>
 </body>
 </html>

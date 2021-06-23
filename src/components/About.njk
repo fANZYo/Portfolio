@@ -1,15 +1,13 @@
-<section>
-	<h2>{{ about.title }}</h2>
+<section class="About">
+	<h2 class="About__title">{{ about.title }}</h2>
 
-	<div>
-		<picture>
-			<source media="(max-width: 799px)" srcset="{{ about.img.small }}">
-			<source media="(min-width: 800px)" srcset="{{ about.img.large }}">
-			<img src="{{ about.img.small }}" alt="{{ about.img.alt }}">
-		</picture>
-	</div>
+	<picture class="About__picture">
+		<source media="(max-width: 799px)" srcset="{{ about.img.small }}">
+		<source media="(min-width: 800px)" srcset="{{ about.img.large }}">
+		<img class="About__img" src="{{ about.img.small }}" alt="{{ about.img.alt }}">
+	</picture>
 
-	<div class="rte">
+	<div class="About__content rte">
 		{{ about.content | safe }}
 	</div>
 </section>

@@ -1,0 +1,26 @@
+.About {
+	&__title {
+		font-size: 4.2rem;
+		margin-bottom: 2rem;
+		padding: 0 1rem;
+	}
+
+	&__picture {
+		display: block;
+		margin-bottom: 2rem;
+		padding-top: calc(3/4 * 80%);
+		position: relative;
+		width: 80%;
+	}
+
+	&__img {
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	&__content {
+		padding: 0 1rem;
+	}
+}

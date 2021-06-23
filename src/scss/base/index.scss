@@ -72,6 +72,11 @@ html[data-theme='dark'] {
 	box-sizing: border-box;
 }
 
+*:focus {
+	outline-width: 3px;
+	outline-color: var(--color);
+}
+
 html {
 	font-family: 'Poppins', sans-serif;
 }
@@ -92,8 +97,59 @@ a {
 	text-decoration: none;
 }
 
-p {
+p, li {
 	line-height: var(--line-height);
 }
 
+em {
+	font-style: italic;
+	font-weight: 400;
+}
+
+strong {
+	font-weight: 600;
+}
+
+.rte {
+	max-width: 70rem;
+	margin-bottom: 2rem;
+
+	h2 {
+		font-size: 2.1rem;
+		margin: 4rem 0 2rem 0;
+	}
+
+	p, ul {
+		margin-bottom: 1.5rem;
+	}
+}
+
+#flying-focus {
+	background: transparent;
+	border: 1px solid var(--background);
+	border-radius: var(--border-radius);
+	margin: 0;
+	outline: 1px solid var(--color);
+	pointer-events: none;
+	position: absolute;
+	transition-property: left, top, width, height;
+	transition-timing-function: linear;
+	visibility: hidden;
+}
+
+#flying-focus.flying-focus-visible {
+	visibility: visible;
+	z-index: 9999;
+}
+
+.flying-focus-target {
+	outline: none !important;
+}
+
+.flying-focus-target::-moz-focus-inner {
+	border: 0 !important;
+}
+
+
+@import '../components/SkipNav.scss';
 @import '../components/Navigation.scss';

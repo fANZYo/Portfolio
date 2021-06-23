@@ -1,6 +1,22 @@
 <section class="Subscribe">
 	<h2 class="sr-only">{{ subscribe.title }}</h2>
 
+	<div class="Subscribe__social">
+		{% set className = "Subscribe__social-svg" %}
+		{% set classCircle = "Subscribe__social-circle" %}
+		{% set classIcon = "Subscribe__social-icon" %}
+
+		<a href="mailto:www.iehl@gmail.com" aria-label="Contact Email">
+			{% include "../img/email.svg" %}
+		</a>
+		<a href="https://twitter.com/www_iehl" aria-label="Contact Twitter">
+			{% include "../img/twitter.svg" %}
+		</a>
+		<a href="https://www.linkedin.com/in/william-iehl/" aria-label="Contact LinkedIn">
+			{% include "../img/linkedin.svg" %}
+		</a>
+	</div>
+
 	<form class="Subscribe__form">
 		<label class="Subscribe__label" for="subscribe-input">{{ subscribe.label | safe }}</label>
 

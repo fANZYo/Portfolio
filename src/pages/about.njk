@@ -3,6 +3,9 @@ layout: DefaultLayout.njk
 title: William IEHL | About
 ---
 
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 	{% include "About.njk" %}
 </main>
+
+{% set subscribe = homepage.subscribe %}
+{% include "Subscribe.njk" %}
