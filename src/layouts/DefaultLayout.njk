@@ -7,11 +7,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<script>
-		const theme = window.localStorage.getItem('WI_theme');
-		document.documentElement.setAttribute('data-theme', theme);
-	</script>
 <head>
+	<script>
+		(() => {
+			const theme = window.localStorage.getItem('WI_theme')
+				|| window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
+			document.documentElement.setAttribute('data-theme', theme);
+		})();
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
