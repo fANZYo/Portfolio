@@ -1,0 +1,50 @@
+.Testimonials {
+	background: var(--background-offset);
+	padding: 4rem 2rem;
+
+	@media screen and (min-width: 800px) {
+		padding: 10rem 2rem;
+	}
+
+	&__container {
+		margin: 0 auto;
+		max-width: 120rem;
+	}
+
+	&__title {
+		margin-bottom: 2rem;
+	}
+
+	&__list {
+		@media screen and (min-width: 800px) {
+			display: flex;
+		}
+	}
+
+	&__item {
+		border-radius: var(--border-radius);
+		background: var(--background);
+
+		@media screen and (max-width: 799px) {
+			margin-bottom: 2rem;
+			padding: 2rem;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		@media screen and (min-width: 800px) {
+			margin-right: 2rem;
+			padding: 3rem;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__caption {
+		color: var(--off-color);
+	}
+}

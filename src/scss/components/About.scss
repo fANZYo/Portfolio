@@ -1,7 +1,14 @@
 .About {
+	max-width: 120rem;
+	margin: 0 auto;
+
+	@media screen and (min-width: 720px) {
+		padding-top: 15rem;
+	}
+
 	&__title {
 		font-size: 4.2rem;
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 		padding: 0 1rem;
 	}
 
@@ -11,6 +18,16 @@
 		padding-top: calc(3/4 * 80%);
 		position: relative;
 		width: 80%;
+
+		@media screen and (min-width: 600px) {
+			padding-top: calc(3/4 * 50rem);
+			width: 50rem;
+		}
+
+		@media screen and (min-width: 1000px) {
+			float: right;
+			margin-left: 2rem;
+		}
 	}
 
 	&__img {

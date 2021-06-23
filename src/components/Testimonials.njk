@@ -1,0 +1,20 @@
+<section class="Testimonials">
+	<div class="Testimonials__container">
+		<h2 class="Testimonials__title">{{ testimonials.title }}</h2>
+
+		<ul class="Testimonials__list">
+			{% for testimonial in testimonials.items %}
+				<li class="Testimonials__item">
+					<figure>
+						<blockquote class="rte">
+							{{ testimonial.content | safe }}
+						</blockquote>
+						<figcaption class="Testimonials__caption">
+							<cite>—{{ testimonial.author }},<br /> {{ testimonial.role }}</cite>
+						</figcaption>
+					</figure>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
