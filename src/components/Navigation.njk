@@ -1,30 +1,41 @@
-<nav class="Navigation">
-	<ul class="Navigation__list">
-		{% for item in navigation.items %}
-			<li class="Navigation__item">
-				<a class="Navigation__link" href="{{ item.url }}">{{ item.label }}</a>
-			</li>
-		{% endfor %}
-	</ul>
+<button class="Navigation__menu js-menu" aria-label="Navigation menu" aria-controls="nav-overlay">
+	{% set className = "Navigation__hamburger" %}
+	{% include "../img/hamburger.svg" %}
+</button>
 
-	{% set className = "Navigation__social-svg" %}
-	{% set classCircle = "Navigation__social-circle" %}
-	{% set classIcon = "Navigation__social-icon" %}
-	<ul class="Navigation__socials">
-		<li class="Navigation__social-item">
-			<a class="Navigation__social-link" href="mailto:www.iehl@gmail.com" aria-label="Contact Email">
-				{% include "../img/email.svg" %}
-			</a>
-		</li>
-		<li class="Navigation__social-item">
-			<a class="Navigation__social-link" href="https://twitter.com/www_iehl" aria-label="Contact Twitter">
-				{% include "../img/twitter.svg" %}
-			</a>
-		</li>
-		<li class="Navigation__social-item">
-			<a class="Navigation__social-link" href="https://www.linkedin.com/in/william-iehl/" aria-label="Contact LinkedIn">
-				{% include "../img/linkedin.svg" %}
-			</a>
-		</li>
-	</ul>
-</nav>
+<div class="Navigation js-nav" aria-expanded="false" id="nav-overlay">
+	<div class="Navigation__container">
+		{% include "Contrast.njk" %}
+
+		<nav class="Navigation__internal">
+			<ul class="Navigation__list">
+				{% for item in navigation.items %}
+					<li class="Navigation__item">
+						<a class="Navigation__link" href="{{ item.url }}">{{ item.label }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+
+		{% set className = "Navigation__social-svg" %}
+		{% set classCircle = "Navigation__social-circle" %}
+		{% set classIcon = "Navigation__social-icon" %}
+		<ul class="Navigation__socials">
+			<li class="Navigation__social-item">
+				<a class="Navigation__social-link" href="mailto:www.iehl@gmail.com" aria-label="Contact via Email">
+					{% include "../img/email.svg" %}
+				</a>
+			</li>
+			<li class="Navigation__social-item">
+				<a class="Navigation__social-link" href="https://twitter.com/www_iehl" aria-label="Contact via Twitter">
+					{% include "../img/twitter.svg" %}
+				</a>
+			</li>
+			<li class="Navigation__social-item">
+				<a class="Navigation__social-link" href="https://www.linkedin.com/in/william-iehl/" aria-label="Contact via LinkedIn">
+					{% include "../img/linkedin.svg" %}
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+<section class="Footer">
+	<h2 class="sr-only">{{ footer.title }}</h2>
+
+	<div class="Footer__social">
+		{% set className = "Footer__social-svg" %}
+		{% set classCircle = "Footer__social-circle" %}
+		{% set classIcon = "Footer__social-icon" %}
+
+		<a href="mailto:www.iehl@gmail.com" aria-label="Contact Email">
+			{% include "../img/email.svg" %}
+		</a>
+		<a href="https://twitter.com/www_iehl" aria-label="Contact Twitter">
+			{% include "../img/twitter.svg" %}
+		</a>
+		<a href="https://www.linkedin.com/in/william-iehl/" aria-label="Contact LinkedIn">
+			{% include "../img/linkedin.svg" %}
+		</a>
+	</div>
+
+	<form class="Footer__form">
+		<label class="Footer__label" for="subscribe-input">{{ footer.label | safe }}</label>
+
+		<div class="Footer__field">
+			<input id="subscribe-input" class="Footer__input" placeholder="Email" type="text" autocomplete="email" />
+			<button class="Footer__submit" type="submit" aria-label="Submit">
+				{% include "../img/arrow.svg" %}
+			</button>
+		</div>
+	</form>
+</section>

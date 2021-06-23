@@ -4,13 +4,10 @@ title: William IEHL | Home
 homePage: true
 ---
 
-<main id="main-content" tabindex="-1">
+<main id="main-content">
 	{% set header = homepage.header %}
 	{% include "Header.njk" %}
 
 	{% set projects = homepage.projects %}
 	{% include "Projects.njk" %}
 </main>
-
-{% set subscribe = homepage.subscribe %}
-{% include "Subscribe.njk" %}

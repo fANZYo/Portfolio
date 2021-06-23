@@ -12,7 +12,56 @@ const lazyIMG = (imgs) => {
 	imgs.forEach((img) => observer.observe(img));
 };
 
+const initThemeToggle = () => {
+	const toggler = document.querySelector('.js-contrast');
+
+	let darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+	const setTheme = () => {
+		if (darkMode) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			toggler.setAttribute('aria-label', 'Switch to light mode');
+		} else {
+			document.documentElement.setAttribute('data-theme', 'light');
+			toggler.setAttribute('aria-label', 'Switch to dark mode');
+		}
+	}
+
+	toggler.addEventListener('click', () => {
+		darkMode = !darkMode;
+
+		setTheme();
+	});
+
+	setTheme();
+};
+
+const initHamburgerMenu = () => {
+	const menu = document.querySelector('.js-menu');
+	const nav = document.querySelector('.js-nav');
+	const contrast = document.querySelector('.js-contrast');
+
+	let open = false;
+
+	menu.addEventListener('click', () => {
+		open = !open;
+
+		if (open) {
+			nav.classList.add('Navigation--open');
+			nav.setAttribute('aria-expanded', true);
+			contrast.focus();
+		} else {
+			nav.classList.remove('Navigation--open');
+			nav.setAttribute('aria-expanded', false);
+			menu.focus();
+		}
+	});
+};
+
 window.onload = () => {
+	initHamburgerMenu();
+	initThemeToggle();
+
 	const lazyIMGs = document.querySelectorAll('.js-lazy-img');
 	lazyIMG(lazyIMGs);
 };

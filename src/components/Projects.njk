@@ -13,16 +13,8 @@
 					<a class="Projects__item-link" href="{{ project.url }}">
 						Go to Site 
 
-						<svg
-							class="Projects__item-external"
-							aria-label="External link"
-							fill="none"
-							viewBox="0 0 21 21"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path d="M5.72727 4.5H1V20.5H17V15.7727" />
-							<path d="M6.57141 14.7325L20.5 1M20.5 1V11.2113M20.5 1H10.1428"/>
-						</svg>
+						{% set className = "Projects__item-external" %}
+						{% include "../img/external.svg" %}
 					</a>
 				</div>
 			</li>
