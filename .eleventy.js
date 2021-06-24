@@ -12,6 +12,7 @@ module.exports = (config) => {
 	config.addPassthroughCopy({ 'src/img': 'assets' });
 	config.addPassthroughCopy({ 'static/assets': 'assets' });
 	config.addPassthroughCopy({ 'static/fonts': 'fonts' });
+	config.addPassthroughCopy({ 'src/_redirects': '_redirects' });
 
 	config.on('beforeBuild', () => {
 		 preBuild(); 
