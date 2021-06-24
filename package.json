@@ -26,6 +26,7 @@
     "critical": "^4.0.0",
     "glob": "^7.1.7",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-parcel": "^0.3.6",
@@ -38,5 +39,18 @@
   },
   "dependencies": {
     "gsap": "^3.6.1"
-  }
+  },
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version",
+			"last 1 ie version"
+		]
+	}
 }
