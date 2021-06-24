@@ -1,6 +1,6 @@
 module.exports = () => {
 	return {
-		title: 'Newsletter & Contacts',
+		title: 'Contacts',
 		label: 'Get <em>Accessibility</em> and <em>Performance</em> tips',
 		placeholder: 'Email',
 	};
