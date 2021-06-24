@@ -2,9 +2,11 @@
 	max-width: 120rem;
 	margin: 0 auto;
 	padding: 0 1rem;
+	padding-bottom: 3rem;
 
 	@media screen and (min-width: 720px) {
 		padding-top: 15rem;
+		padding-bottom: 10rem;
 	}
 
 	&__title {
