@@ -11,8 +11,48 @@ module.exports = () => {
 			],
 			blurb: 'Hi, I\'m William — a freelance Web UI engineer.<br/>I help companies and organizations create modern, inclusive, and resilient web user interfaces and design systems with a strong focus on accessibility, performance, and maintainability.',
 			img: {
-				large: 'assets/self-portrait.jpg',
-				small: 'assets/self.jpg?nf_resize=fit&w=720',
+				mobile: {
+					small: {
+						url: 'assets/self.jpg?nf_resize=fit&w=425',
+						size: '425',
+					},
+					medium: {
+						url: 'assets/self.jpg?nf_resize=fit&w=638',
+						size: '638',
+					},
+					large: {
+						url: 'assets/self.jpg?nf_resize=fit&w=850',
+						size: '850',
+					},
+				},
+				tablet: {
+					small: {
+						url: 'assets/self-portrait.jpg?nf_resize=fit&w=245',
+						size: '245',
+					},
+					medium: {
+						url: 'assets/self-portrait.jpg?nf_resize=fit&w=368',
+						size: '368',
+					},
+					large: {
+						url: 'assets/self-portrait.jpg?nf_resize=fit&w=490',
+						size: '490',
+					},
+				},
+				desktop: {
+					small: {
+						url: 'assets/self-portrait.jpg?nf_resize=fit&w=310',
+						size: '310',
+					},
+					medium: {
+						url: 'assets/self-portrait.jpg?nf_resize=fit&w=465',
+						size: '465',
+					},
+					large: {
+						url: 'assets/self-portrait.jpg?nf_resize=fit&w=620',
+						size: '620',
+					},
+				},
 				alt: "A portrait picture of William",
 			},
 		},

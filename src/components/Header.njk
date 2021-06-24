@@ -9,8 +9,30 @@
 		<p class="Header__blurb">{{ header.blurb | safe }}</p>
 
 		<picture class="Header__picture">
-			<source media="(max-width: 719px)" srcset="{{ header.img.small }}">
-			<source media="(min-width: 720px)" srcset="{{ header.img.large }}">
+			<source
+				media="(max-width: 719px)"
+				srcset="
+					{{ header.img.mobile.small.url }} {{ header.img.mobile.small.size }}w
+					{{ header.img.mobile.medium.url }} {{ header.img.mobile.medium.size }}w
+					{{ header.img.mobile.large.url }} {{ header.img.mobile.large.size }}w
+				"
+			>
+			<source
+				media="(min-width: 720px) and (max-width: 899px)"
+				srcset="
+					{{ header.img.tablet.small.url }} {{ header.img.tablet.small.size }}w
+					{{ header.img.tablet.medium.url }} {{ header.img.tablet.medium.size }}w
+					{{ header.img.tablet.large.url }} {{ header.img.tablet.large.size }}w
+				"
+			>
+			<source
+				media="(min-width: 900px)"
+				srcset="
+					{{ header.img.desktop.small.url }} {{ header.img.desktop.small.size }}w
+					{{ header.img.desktop.medium.url }} {{ header.img.desktop.medium.size }}w
+					{{ header.img.desktop.large.url }} {{ header.img.desktop.large.size }}w
+				"
+			>
 			<img class="Header__img" src="{{ header.img.small }}" alt="{{ header.img.alt }}">
 		</picture>
 	</div>
