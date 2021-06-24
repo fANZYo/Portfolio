@@ -104,7 +104,7 @@ module.exports = () => {
 		},
 		{
 			title: 'Wolves TV',
-			blurb: 'Wolverhampton Wanderers F.C., another one of England\'s top football clubs. To bring the latest news and videos to their fans, they needed a new modern platform that matches the needs of their users. Wolves TV is a dedicated video streaming platform that offers fans alternative ways to follow their favorite team.',
+			blurb: 'Wolverhampton Wanderers F.C., another one of England\'s top football clubs. To bring the latest news and videos to their fans, Wolves needed a new modern platform that matches the needs of their users. Wolves TV is a dedicated video streaming platform that offers fans an alternative ways to follow their favorite team.',
 			role: ['Development'],
 			url: 'https://tv.wolves.co.uk/',
 			img: {
