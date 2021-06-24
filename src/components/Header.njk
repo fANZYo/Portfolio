@@ -1,10 +1,10 @@
-<section class="Header" aria-label="Header" aria-roledescription="banner">
+<section class="Header" aria-label="Hero section">
 	<div class="Header__content">
-		<h1 class="Header__title" id="header-title">
+		<h2 class="Header__title" id="header-title">
 			{% for keyword in header.title %}
 				<span class="Header__keyword">{{ keyword }}</span>
 			{% endfor %}
-		</h1>
+		</h2>
 
 		<p class="Header__blurb">{{ header.blurb | safe }}</p>
 
