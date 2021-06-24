@@ -11,6 +11,7 @@ module.exports = (config) => {
 	config.addWatchTarget('./static/assets/');
 	config.addPassthroughCopy({ 'src/img': 'assets' });
 	config.addPassthroughCopy({ 'static/assets': 'assets' });
+	config.addPassthroughCopy({ 'static/fonts': 'fonts' });
 
 	config.on('beforeBuild', () => {
 		 preBuild(); 
