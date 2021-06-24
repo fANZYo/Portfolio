@@ -57,7 +57,7 @@ module.exports = () => {
 						size: '620',
 					},
 				},
-				alt: "A portrait picture of William",
+				alt: 'A portrait picture of William',
 			},
 		},
 		projects: {

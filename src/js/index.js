@@ -3,7 +3,7 @@ const lazyIMG = (imgs) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				observer.unobserve(entry.target);
-				entry.target.setAttribute('srcset', entry.target.dataset.srcset);
+				entry.target.setAttribute('src', entry.target.dataset.src);
 			}
 		});
 	};
