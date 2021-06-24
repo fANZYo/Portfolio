@@ -8,7 +8,7 @@
 				<picture class="Projects__illustration">
 					<source
 						media="(max-width: 719px)"
-						srcset="
+						data-srcset="
 							{{ project.img.mobile.small.url }} {{ project.img.mobile.small.size }}w,
 							{{ project.img.mobile.medium.url }} {{ project.img.mobile.medium.size }}w,
 							{{ project.img.mobile.large.url }} {{ project.img.mobile.large.size }}w
@@ -16,7 +16,7 @@
 					>
 					<source
 						media="(min-width: 720px) and (max-width: 1100px)"
-						srcset="
+						data-srcset="
 							{{ project.img.tablet.small.url }},
 							{{ project.img.tablet.medium.url }} 1.5x,
 							{{ project.img.tablet.large.url }} 2x
@@ -24,13 +24,13 @@
 					>
 					<source
 						media="(min-width: 1100px)"
-						srcset="
+						data-srcset="
 							{{ project.img.desktop.small.url }},
 							{{ project.img.desktop.medium.url }} 1.5x,
 							{{ project.img.desktop.large.url }} 2x
 						"
 					>
-					<img class="Projects__img js-lazy-img" src="/assets/placeholder.png" data-src="{{ project.img.mobile.small.url }}" alt="{{ project.img.alt }}">
+					<img class="Projects__img js-lazy-img" src="/assets/placeholder.png" alt="{{ project.img.alt }}">
 				</picture>
 				<div class="Projects__content">
 					<p class="Projects__item-blurb">{{ project.blurb }}</p>
