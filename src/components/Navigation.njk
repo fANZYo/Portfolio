@@ -1,9 +1,9 @@
-<button class="Navigation__menu js-menu" aria-label="Navigation menu" aria-controls="nav-overlay">
+<button class="Navigation__menu js-menu" aria-label="Navigation menu" aria-expanded="false">
 	{% set className = "Navigation__hamburger" %}
 	{% include "../img/hamburger.svg" %}
 </button>
 
-<div class="Navigation js-nav" aria-expanded="false" id="nav-overlay">
+<div class="Navigation js-nav" id="nav-overlay">
 	<div class="Navigation__container">
 		{% include "Contrast.njk" %}
 
@@ -32,7 +32,7 @@
 				</a>
 			</li>
 			<li class="Navigation__social-item">
-				<a class="Navigation__social-link" href="https://www.linkedin.com/in/william-iehl/" aria-label="Contact via LinkedIn">
+				<a class="Navigation__social-link js-nav-last" href="https://www.linkedin.com/in/william-iehl/" aria-label="Contact via LinkedIn">
 					{% include "../img/linkedin.svg" %}
 				</a>
 			</li>

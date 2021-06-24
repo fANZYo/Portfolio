@@ -4,15 +4,14 @@
 {% set theme %}
 	{% include "../js/theme.js" %}
 {% endset %}
-{% set js %}
+{% set main %}
 	{% include "../js/index.js" %}
 {% endset %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script>
-		// Prevent Flash Of Incorrect Theme
+	<script>// Prevent Flash Of Incorrect Theme
 		{{ theme | jsmin | safe }}
 	</script>
 	<meta charset="UTF-8">
@@ -37,7 +36,7 @@
 	</div>
 
 	<script>
-		{{ js | jsmin | safe }}
+		{{ main | jsmin | safe }}
 	</script>
 	<script>
 		{{ flyingFocus | jsmin | safe }}

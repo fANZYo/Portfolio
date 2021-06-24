@@ -44,21 +44,50 @@ const initThemeToggle = () => {
 const initHamburgerMenu = () => {
 	const menu = document.querySelector('.js-menu');
 	const nav = document.querySelector('.js-nav');
-	const contrast = document.querySelector('.js-contrast');
+	const lastElement = document.querySelector('.js-nav-last');
 
 	let open = false;
 
-	menu.addEventListener('click', () => {
-		open = !open;
+	const closeMenu = () => {
+		nav.classList.remove('Navigation--open');
+		menu.setAttribute('aria-expanded', false);
+		menu.focus();
+		document.body.classList.remove('noscroll');
 
-		if (open) {
-			nav.classList.add('Navigation--open');
-			nav.setAttribute('aria-expanded', true);
-			contrast.focus();
-		} else {
-			nav.classList.remove('Navigation--open');
-			nav.setAttribute('aria-expanded', false);
+		open = false;
+	};
+
+	const openMenu = () => {
+		nav.classList.add('Navigation--open');
+		menu.setAttribute('aria-expanded', true);
+		document.body.classList.add('noscroll');
+
+		open = true;
+	};
+
+	nav.addEventListener('keydown', (e) => {
+		if (open && e.key === 'Escape') {
+			closeMenu();
+		} else if (open && e.key === 'Tab' && !e.shiftKey && document.activeElement === lastElement) {
+			e.preventDefault();
 			menu.focus();
+		}
+	});
+
+	menu.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			closeMenu();
+		} else if (open && e.key === 'Tab' && e.shiftKey && document.activeElement === menu) {
+			e.preventDefault();
+			lastElement.focus();
+		}
+	});
+
+	menu.addEventListener('click', () => {
+		if (!open) {
+			openMenu();
+		} else {
+			closeMenu();
 		}
 	});
 };
