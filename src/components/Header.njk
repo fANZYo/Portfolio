@@ -12,25 +12,25 @@
 			<source
 				media="(max-width: 719px)"
 				srcset="
-					{{ header.img.mobile.small.url }} {{ header.img.mobile.small.size }}w,
-					{{ header.img.mobile.medium.url }} {{ header.img.mobile.medium.size }}w,
-					{{ header.img.mobile.large.url }} {{ header.img.mobile.large.size }}w
+					{{ header.img.mobile.small.url }},
+					{{ header.img.mobile.medium.url }} 1.5x,
+					{{ header.img.mobile.large.url }} 2x
 				"
 			>
 			<source
 				media="(min-width: 720px) and (max-width: 899px)"
 				srcset="
-					{{ header.img.tablet.small.url }} {{ header.img.tablet.small.size }}w,
-					{{ header.img.tablet.medium.url }} {{ header.img.tablet.medium.size }}w,
-					{{ header.img.tablet.large.url }} {{ header.img.tablet.large.size }}w
+					{{ header.img.tablet.small.url }},
+					{{ header.img.tablet.medium.url }} 1.5x,
+					{{ header.img.tablet.large.url }} 2x
 				"
 			>
 			<source
 				media="(min-width: 900px)"
 				srcset="
-					{{ header.img.desktop.small.url }} {{ header.img.desktop.small.size }}w,
-					{{ header.img.desktop.medium.url }} {{ header.img.desktop.medium.size }}w,
-					{{ header.img.desktop.large.url }} {{ header.img.desktop.large.size }}w
+					{{ header.img.desktop.small.url }},
+					{{ header.img.desktop.medium.url }} 1.5x,
+					{{ header.img.desktop.large.url }} 2x
 				"
 			>
 			<img class="Header__img" src="{{ header.img.mobile.small.url }}" alt="{{ header.img.alt }}">
