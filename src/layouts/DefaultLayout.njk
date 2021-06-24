@@ -1,6 +1,9 @@
 {% set flyingFocus %}
 	{% include "../js/flyingFocus.js" %}
 {% endset %}
+{% set theme %}
+	{% include "../js/theme.js" %}
+{% endset %}
 {% set js %}
 	{% include "../js/index.js" %}
 {% endset %}
@@ -9,35 +12,8 @@
 <html lang="en">
 <head>
 	<script>
-		(() => {
-			const themes = {
-				light: {
-					"background": "hsl(0, 0%, 99%)",
-					"background-offset": "hsl(180, 11%, 93%)",
-					"background-contrast": "hsl(231, 15%, 18%)",
-					"color": "hsl(0, 0%, 9%)",
-					"off-color": "hsl(0, 0%, 34%)",
-					"highlight": "hsl(234, 61%, 50%)",
-					"link-color": "hsl(234, 61%, 50%)",
-				},
-				dark: {
-					"background": "hsl(0, 0%, 9%)",
-					"background-offset": "hsl(231, 15%, 18%)",
-					"background-contrast": "hsl(180, 11%, 93%)",
-					"color": "hsl(0, 0%, 99%)",
-					"off-color": "hsl(0, 0%, 64%)",
-					"highlight": "hsl(185, 100%, 50%)",
-					"link-color": "hsl(185, 100%, 50%)",
-				}
-			};
-
-			const theme = window.localStorage.getItem('WI_theme')
-				|| window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light';
-
-			Object.keys(themes[theme]).forEach((key) => {
-				document.documentElement.style.setProperty("--" + key, themes[theme][key]);
-			});
-		})();
+		// Prevent Flash Of Incorrect Theme
+		{{ theme | jsmin | safe }}
 	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">

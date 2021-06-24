@@ -15,24 +15,28 @@ const lazyIMG = (imgs) => {
 const initThemeToggle = () => {
 	const toggler = document.querySelector('.js-contrast');
 
-	let darkMode = window.localStorage.getItem('WI_theme') === 'dark'
-		|| window.matchMedia('(prefers-color-scheme: dark)').matches;
+	const themes = {
+		light: {
+			label: 'Switch to dark mode',
+			next: 'dark',
+		},
+		dark: {
+			label: 'Switch to light mode',
+			next: 'light',
+		},
+	};
+	toggler.setAttribute('aria-label', themes[document.documentElement.dataset.theme].label);
 
 	const setTheme = () => {
-		if (darkMode) {
-			document.documentElement.setAttribute('data-theme', 'dark');
-			toggler.setAttribute('aria-label', 'Switch to light mode');
-			window.localStorage.setItem('WI_theme', 'dark');
-		} else {
-			document.documentElement.setAttribute('data-theme', 'light');
-			toggler.setAttribute('aria-label', 'Switch to dark mode');
-			window.localStorage.setItem('WI_theme', 'light');
-		}
+		const { theme } = document.documentElement.dataset;
+
+		window.__setTheme(themes[theme].next, () => {
+			window.localStorage.setItem('WI_theme', themes[theme].next);
+			toggler.setAttribute('aria-label', themes[theme].label);
+		});
 	}
 
 	toggler.addEventListener('click', () => {
-		darkMode = !darkMode;
-
 		setTheme();
 	});
 };
