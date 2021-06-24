@@ -1,6 +1,7 @@
 .Footer {
 	background: var(--color);
 	padding: 5rem 2rem;
+	position: relative;
 
 	&__form {
 		max-width: 60rem;
@@ -63,5 +64,14 @@
 
 	&__social-icon {
 		fill: var(--background);
+	}
+
+	&__copyright {
+		bottom: 1.6rem;
+		color: var(--background);
+		font-size: 1.4rem;
+		left: 50%;
+		position: absolute;
+		transform: translateX(-50%);
 	}
 }
