@@ -1,6 +1,6 @@
-<section class="Header" aria-labelledby="header-title" aria-roledescription="banner">
+<section class="Header" aria-label="{{ header.title }}" aria-roledescription="banner">
 	<div class="Header__content">
-		<h1 class="Header__title" id="header-title">
+		<h1 class="Header__title">
 			{% for keyword in header.title %}
 				<span class="Header__keyword">{{ keyword }}</span>
 			{% endfor %}
