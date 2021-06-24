@@ -12,6 +12,10 @@ module.exports = () => {
 			blurb: 'Hi, I\'m William — a freelance Web UI engineer.<br/>I help companies and organizations create modern, inclusive, and resilient web user interfaces and design systems with a strong focus on accessibility, performance, and maintainability.',
 			img: {
 				mobile: {
+					xsmall: {
+						url: 'assets/self.jpg?nf_resize=fit&w=300',
+						size: '300',
+					},
 					small: {
 						url: 'assets/self.jpg?nf_resize=fit&w=425',
 						size: '425',
