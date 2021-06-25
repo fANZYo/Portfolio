@@ -73,7 +73,7 @@ module.exports = () => {
 					role: 'CEO of Aqueduct',
 				},
 				{
-					content: '<p>&#8220;I worked with William on the Scope website. He is one of the best front-end developers I have worked with. He has incredible attention to detail and actively sets out to build the best, fully accessible website, with the fastest load time – and he is always seeking further enhancements.</p><p>The quality of William\'s work is second to none. He has a positive “can do” attitude and is a well-valued team player; I highly recommend William as a front-end developer.&#8221;</p>',
+					content: '<p>&#8220;I worked with William on the Scope website. He is one of the best front-end developers I have worked with. He has incredible attention to detail and actively sets out to build the best, fully accessible website, with the fastest load time – and he is always seeking further enhancements.</p><p>The quality of William\'s work is second to none. He has a positive can do attitude and is a well-valued team player; I highly recommend William as a front-end developer.&#8221;</p>',
 					author: 'Sam Morrison',
 					role: 'Senior Sitecore developer',
 				},
