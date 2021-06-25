@@ -68,12 +68,12 @@ module.exports = () => {
 			title: 'What has been said about me',
 			items: [
 				{
-					content: '<p>William is a hugely talented front end developer, he is passionate about his craft whether it is about the architecture of the solution or its accessibility compliance.</p><p>He is focused, reliable and hard working.</p>',
+					content: '<p>&#8220;William is a hugely talented front end developer, he is passionate about his craft whether it is about the architecture of the solution or its accessibility compliance.</p><p>He is focused, reliable and hard working.&#8221;</p>',
 					author: 'Guillaume Buat-Ménard',
 					role: 'CEO of Aqueduct',
 				},
 				{
-					content: '<p>I worked with William on the Scope website. He is one of the best front-end developers I have worked with. He has incredible attention to detail and actively sets out to build the best, fully accessible website, with the fastest load time – and he is always seeking further enhancements.</p><p>The quality of William\'s work is second to none. He has a positive “can do” attitude and is a well-valued team player; I highly recommend William as a front-end developer.</p>',
+					content: '<p>&#8220;I worked with William on the Scope website. He is one of the best front-end developers I have worked with. He has incredible attention to detail and actively sets out to build the best, fully accessible website, with the fastest load time – and he is always seeking further enhancements.</p><p>The quality of William\'s work is second to none. He has a positive “can do” attitude and is a well-valued team player; I highly recommend William as a front-end developer.&#8221;</p>',
 					author: 'Sam Morrison',
 					role: 'Senior Sitecore developer',
 				},
