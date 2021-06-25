@@ -12,7 +12,7 @@ const lazyIMG = (imgs) => {
 		});
 	};
 
-	const observer = new IntersectionObserver(loadIMG);
+	const observer = new IntersectionObserver(loadIMG, { rootMargin: '100px' });
 	imgs.forEach((img) => observer.observe(img));
 };
 
