@@ -56,7 +56,7 @@ const initHamburgerMenu = () => {
 		nav.classList.remove('Navigation--open');
 		menu.setAttribute('aria-expanded', false);
 		menu.focus();
-		document.body.classList.remove('noscroll');
+		document.documentElement.classList.remove('noscroll');
 
 		open = false;
 	};
@@ -64,7 +64,7 @@ const initHamburgerMenu = () => {
 	const openMenu = () => {
 		nav.classList.add('Navigation--open');
 		menu.setAttribute('aria-expanded', true);
-		document.body.classList.add('noscroll');
+		document.documentElement.classList.add('noscroll');
 
 		open = true;
 	};
