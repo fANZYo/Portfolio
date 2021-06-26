@@ -1,9 +1,11 @@
 <section class="Header" aria-label="{{ header.title | join(" ") }}">
 	<div class="Header__content">
-		<h1 class="Header__title">
-			{% for keyword in header.title %}
-				<span class="Header__keyword">{{ keyword }}</span>
-			{% endfor %}
+		<h1 class="Header__title" aria-label="{{ header.title | join(' ') }}">
+			<span aria-hidden="true">
+				{% for keyword in header.title %}
+					<span class="Header__keyword">{{ keyword }}</span>
+				{% endfor %}
+			</span>
 		</h1>
 
 		<p class="Header__blurb">{{ header.blurb | safe }}</p>
