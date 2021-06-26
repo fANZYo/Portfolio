@@ -70,8 +70,9 @@
 		bottom: 1.6rem;
 		color: var(--background);
 		font-size: 1.4rem;
-		left: 50%;
+		left: 0;
 		position: absolute;
-		transform: translateX(-50%);
+		text-align: center;
+		width: 100%;
 	}
 }
