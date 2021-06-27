@@ -7,11 +7,11 @@ module.exports = () => {
 			},
 			{
 				label: 'About',
-				url: '/about',
+				url: '/about/',
 			},
 			{
 				label: 'Hire me',
-				url: '/hire-me',
+				url: '/hire-me/',
 			},
 		],
 	};
