@@ -29,9 +29,9 @@
 <body>
 	{% include "SkipNav.njk" %}
 
-	<div class="Content">
-		{% include "Navigation.njk" %}
+	{% include "Navigation.njk" %}
 
+	<div class="js-content">
 		{{ content | safe }}
 
 		{% include "Footer.njk" %}
