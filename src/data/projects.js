@@ -6,48 +6,8 @@ module.exports = () => {
 			role: ['Development', 'Accessibility', 'Performance', 'Architecture'],
 			url: 'https://www.scope.org.uk/',
 			img: {
-				mobile: {
-					small: {
-						url: '/assets/scope.jpg?nf_resize=fit&w=360',
-						size: '360',
-					},
-					medium: {
-						url: '/assets/scope.jpg?nf_resize=fit&w=540',
-						size: '540',
-					},
-					large: {
-						url: '/assets/scope.jpg?nf_resize=fit&w=720',
-						size: '720',
-					},
-				},
-				tablet: {
-					small: {
-						url: '/assets/scope.jpg?nf_resize=fit&w=360',
-						size: '360',
-					},
-					medium: {
-						url: '/assets/scope.jpg?nf_resize=fit&w=540',
-						size: '540',
-					},
-					large: {
-						url: '/assets/scope.jpg?nf_resize=fit&w=720',
-						size: '720',
-					},
-				},
-				desktop: {
-					small: {
-						url: '/assets/scope.jpg?nf_resize=fit&w=450',
-						size: '450',
-					},
-					medium: {
-						url: '/assets/scope.jpg?nf_resize=fit&w=675',
-						size: '675',
-					},
-					large: {
-						url: '/assets/scope.jpg?nf_resize=fit&w=900',
-						size: '900',
-					},
-				},
+				bg: '#340458',
+				url: '/assets/scope.svg',
 				alt: 'Scope illustration',
 			},
 		},
@@ -57,48 +17,8 @@ module.exports = () => {
 			role: ['Development', 'Performance'],
 			url: 'https://www.tottenhamhotspur.com/',
 			img: {
-				mobile: {
-					small: {
-						url: '/assets/spurs.jpg?nf_resize=fit&w=360',
-						size: '360',
-					},
-					medium: {
-						url: '/assets/spurs.jpg?nf_resize=fit&w=540',
-						size: '540',
-					},
-					large: {
-						url: '/assets/spurs.jpg?nf_resize=fit&w=720',
-						size: '720',
-					},
-				},
-				tablet: {
-					small: {
-						url: '/assets/spurs.jpg?nf_resize=fit&w=360',
-						size: '360',
-					},
-					medium: {
-						url: '/assets/spurs.jpg?nf_resize=fit&w=540',
-						size: '540',
-					},
-					large: {
-						url: '/assets/spurs.jpg?nf_resize=fit&w=720',
-						size: '720',
-					},
-				},
-				desktop: {
-					small: {
-						url: '/assets/spurs.jpg?nf_resize=fit&w=450',
-						size: '450',
-					},
-					medium: {
-						url: '/assets/spurs.jpg?nf_resize=fit&w=675',
-						size: '675',
-					},
-					large: {
-						url: '/assets/spurs.jpg?nf_resize=fit&w=900',
-						size: '900',
-					},
-				},
+				bg: '#111737',
+				url: '/assets/spurs.svg',
 				alt: 'Tottenham Hotspur illustration',
 			},
 		},
@@ -108,48 +28,8 @@ module.exports = () => {
 			role: ['Development'],
 			url: 'https://tv.wolves.co.uk/',
 			img: {
-				mobile: {
-					small: {
-						url: '/assets/wolvesTV.jpg?nf_resize=fit&w=360',
-						size: '360',
-					},
-					medium: {
-						url: '/assets/wolvesTV.jpg?nf_resize=fit&w=540',
-						size: '540',
-					},
-					large: {
-						url: '/assets/wolvesTV.jpg?nf_resize=fit&w=720',
-						size: '720',
-					},
-				},
-				tablet: {
-					small: {
-						url: '/assets/wolvesTV.jpg?nf_resize=fit&w=360',
-						size: '360',
-					},
-					medium: {
-						url: '/assets/wolvesTV.jpg?nf_resize=fit&w=540',
-						size: '540',
-					},
-					large: {
-						url: '/assets/wolvesTV.jpg?nf_resize=fit&w=720',
-						size: '720',
-					},
-				},
-				desktop: {
-					small: {
-						url: '/assets/wolvesTV.jpg?nf_resize=fit&w=450',
-						size: '450',
-					},
-					medium: {
-						url: '/assets/wolvesTV.jpg?nf_resize=fit&w=675',
-						size: '675',
-					},
-					large: {
-						url: '/assets/wolvesTV.jpg?nf_resize=fit&w=900',
-						size: '900',
-					},
-				},
+				bg: '#1C1C1C',
+				url: '/assets/wolvesTV.svg',
 				alt: 'Wolves TV illustration',
 			},
 		},

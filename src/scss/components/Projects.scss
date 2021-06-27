@@ -43,6 +43,7 @@
 	}
 
 	&__illustration {
+		background-color: var(--background-color);
 		border: 1px solid var(--color);
 		border-radius: var(--border-radius);
 		box-sizing: content-box;
@@ -69,11 +70,11 @@
 	}
 
 	&__img {
-		height: 100%;
-		left: 0;
+		height: 55%;
+		left: 50%;
 		position: absolute;
-		top: 0;
-		width: 100%;
+		top: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	&__content {

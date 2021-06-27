@@ -2,12 +2,10 @@ const lazyIMG = (imgs) => {
 	const loadIMG = (entries, observer) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
-				observer.unobserve(entry.target);
-				entry.target.closest('picture')
-					.querySelectorAll('source')
-					.forEach((source) => {
-						source.setAttribute('srcset', source.dataset.srcset);
-					});
+				const img = entry.target;
+
+				observer.unobserve(img);
+				img.setAttribute('src', img.dataset.src);
 			}
 		});
 	};
