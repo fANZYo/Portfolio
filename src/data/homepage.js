@@ -77,7 +77,11 @@ module.exports = () => {
 					author: 'Sam Morrison',
 					role: 'Senior Sitecore developer',
 				},
-			]
+			],
+			cta: {
+				label: "Hire Me",
+				url: '/hire-me',
+			}
 		},
 	};
 };
