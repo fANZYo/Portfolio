@@ -1,6 +1,6 @@
 module.exports = (config) => {
   config.addNunjucksShortcode('GTAG', () => {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.GA_ENABLED) {
       return `
 				<!-- Global site tag (gtag.js) - Google Analytics -->
 				<script async src="https://www.googletagmanager.com/gtag/js?id=G-K9NHEFPWPW"></script>
