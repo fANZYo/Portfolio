@@ -11,9 +11,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script>// Prevent Flash Of Incorrect Theme
-		{{ theme | jsmin | safe }}
-	</script>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +25,12 @@
 	<meta name="twitter:title" content="William IEHL - Freelance Developer, Accessibility and Performance advocate">
 	<meta name="twitter:description" content="Helping make the web better for everyone alike through accessibility and performance focused development processes.">
 	<meta name="twitter:image" content="https://william-iehl.com/assets/ogImage.jpg">
+
+	{% GTAG %}
+
+	<script>// Prevent Flash Of Incorrect Theme
+		{{ theme | jsmin | safe }}
+	</script>
 
 	<link rel="preload" href="/fonts/Poppins-regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
 	<link rel="preload" href="/fonts/Poppins-semi-bold.woff2" crossorigin="anonymous" as="font" type="font/woff2">

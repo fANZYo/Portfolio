@@ -2,6 +2,7 @@ const htmlmin = require('html-minifier');
 const terser = require('terser');
 const sass = require('node-sass');
 const cleanCSS = require('clean-css');
+const shortcodes = require('./shortcodes');
 const { preBuild, postBuild } = require('./gulpfile');
 
 module.exports = (config) => {
@@ -13,6 +14,8 @@ module.exports = (config) => {
 	config.addPassthroughCopy({ 'static/assets': 'assets' });
 	config.addPassthroughCopy({ 'static/fonts': 'fonts' });
 	config.addPassthroughCopy({ 'src/_redirects': '_redirects' });
+
+	shortcodes(config);
 
 	config.on('beforeBuild', () => {
 		 preBuild(); 
