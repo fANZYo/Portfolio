@@ -53,6 +53,7 @@ const initHamburgerMenu = () => {
 	const closeMenu = () => {
 		nav.classList.remove('Navigation--open');
 		document.querySelector('.js-content').removeAttribute('aria-hidden');
+		document.querySelector('.js-footer').removeAttribute('aria-hidden');
 		document.querySelector('.js-skipnav').removeAttribute('aria-hidden');
 		menu.setAttribute('aria-expanded', false);
 		menu.focus();
@@ -64,6 +65,7 @@ const initHamburgerMenu = () => {
 	const openMenu = () => {
 		nav.classList.add('Navigation--open');
 		document.querySelector('.js-content').setAttribute('aria-hidden', true);
+		document.querySelector('.js-footer').setAttribute('aria-hidden', true);
 		document.querySelector('.js-skipnav').setAttribute('aria-hidden', true);
 		menu.setAttribute('aria-expanded', true);
 		document.documentElement.classList.add('noscroll');

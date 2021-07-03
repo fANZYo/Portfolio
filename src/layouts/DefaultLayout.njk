@@ -41,15 +41,15 @@
 	<title>{{ title }}</title>
 </head>
 <body>
-	{% include "SkipNav.njk" %}
+	<header>
+		{% include "SkipNav.njk" %}
 
-	{% include "Navigation.njk" %}
+		{% include "Navigation.njk" %}
+	</header>
 
-	<div class="js-content">
-		{{ content | safe }}
+	{{ content | safe }}
 
-		{% include "Footer.njk" %}
-	</div>
+	{% include "Footer.njk" %}
 
 	<script>
 		{{ main | jsmin | safe }}
