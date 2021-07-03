@@ -42,6 +42,10 @@
 </head>
 <body>
 	<header>
+		{% if page.url == '/' %}
+			<h1 class="sr-only">William's portfolio</h1>
+		{% endif %}
+
 		{% include "SkipNav.njk" %}
 
 		{% include "Navigation.njk" %}
