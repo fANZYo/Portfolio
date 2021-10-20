@@ -9,7 +9,7 @@ module.exports = () => {
 				'Experiences',
 				'For Everyone',
 			],
-			blurb: 'Hi, I\'m William — a freelance Web UI engineer.<br/>I help companies and organizations create modern, inclusive, and resilient web user interfaces and design systems with a strong focus on accessibility, performance, and maintainability.',
+			blurb: 'Hi, I\'m William — a freelance web developer.<br/>I help companies and organizations create modern, inclusive, and resilient websites and online experiences with a strong focus on accessibility, performance, and maintainability.',
 			img: {
 				mobile: {
 					xsmall: {
