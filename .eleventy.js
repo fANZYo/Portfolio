@@ -1,3 +1,4 @@
+require('dotenv').config();
 const htmlmin = require('html-minifier');
 const terser = require('terser');
 const sass = require('node-sass');

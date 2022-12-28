@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve --port 3000",
-    "build": "eleventy"
+    "start": "npx eleventy --serve --port 3000",
+    "build": "npx eleventy"
   },
   "repository": {
     "type": "git",
@@ -19,38 +19,40 @@
   },
   "homepage": "https://github.com/fANZYo/Portfolio#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@babel/core": "^7.14.5",
-    "@babel/preset-env": "^7.14.5",
-    "clean-css": "^5.1.2",
+    "@11ty/eleventy": "^1.0.2",
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "clean-css": "^5.3.1",
     "critical": "^4.0.0",
-    "glob": "^7.1.7",
+    "glob": "^7.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-parcel": "^0.3.6",
-    "gulp-sass": "^4.1.0",
-    "gulp-terser": "^2.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
     "html-minifier": "^4.0.0",
-    "node-sass": "^6.0.0",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^8.0.0",
     "parcel-bundler": "^1.12.5",
-    "terser": "^5.7.0"
+    "terser": "^5.16.1"
   },
   "dependencies": {
-    "gsap": "^3.6.1"
+    "dotenv": "^16.0.3",
+    "gsap": "^3.11.4"
   },
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version",
-			"last 1 ie version"
-		]
-	}
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
+  }
 }
