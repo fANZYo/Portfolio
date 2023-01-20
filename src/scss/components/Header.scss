@@ -4,7 +4,7 @@
 		display: flex;
 		justify-content: center;
 		min-height: 100vh;
-		padding: 10rem 0;
+		padding-top: 10rem;
 	}
 
 	&__content {
@@ -71,6 +71,7 @@
 		border-top-right-radius: var(--border-radius);
 		border-bottom-right-radius: var(--border-radius);
 		color: var(--background);
+		font-weight: 350;
 		padding: 2rem;
 		position: relative;
 		z-index: 1;

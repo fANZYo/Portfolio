@@ -81,6 +81,7 @@ html[data-theme='dark'] {
 
 *, *::before, *::after {
 	box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 *:focus {
@@ -90,13 +91,14 @@ html[data-theme='dark'] {
 }
 
 html {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Lexend', sans-serif;
 }
 
 body {
 	background-color: var(--background);
 	color: var(--color);
 	font-size: var(--font-size);
+	font-weight: 300;
 }
 
 .noscroll {

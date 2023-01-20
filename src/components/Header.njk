@@ -1,6 +1,6 @@
-<section class="Header" aria-label="{{ header.title }}">
+<section class="Header" aria-label="{{ header.title | join(" ") }}">
 	<div class="Header__content">
-		<h2 class="Header__title" aria-label="{{ header.title }}">
+		<h2 class="Header__title" aria-label="{{ header.title | join(" ") }}">
 			<span aria-hidden="true">
 				{% for keyword in header.title %}
 					<span class="Header__keyword">{{ keyword }}</span>

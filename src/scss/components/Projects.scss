@@ -4,9 +4,11 @@
 	max-width: 120rem;
 
 	&__title {
-		font-weight: 700;
+		font-weight: 900;
+    font-size: 4rem;
 		margin-bottom: 2rem;
-		padding: 0 1.5rem;
+
+		@include title;
 	}
 
 	&__list {

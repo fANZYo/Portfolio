@@ -1,0 +1,98 @@
+.Values {
+	position: relative;
+	padding-bottom: 25rem;
+	padding-top: 20rem;
+	background-color: var(--white);
+	color: var(--black);
+
+	&__container {
+		margin: 0 auto;
+		max-width: 120rem;
+	}
+
+	&__intro {
+		margin-bottom: 2rem;
+
+		@media screen and (min-width: 720px) {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 5rem;
+		}
+	}
+
+	&__title {
+		font-weight: 900;
+		font-size: 4rem;
+		flex: 0 0 35%;
+
+		@include title;
+	}
+
+	&__description {
+		flex: 0 0 50%;
+	}
+
+	&__list {
+		@media screen and (min-width: 720px) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__item {
+		background-color: var(--black);
+		color: var(--white);
+		padding: 2rem;
+		border-radius: var(--border-radius);
+		font-size: 1.6rem;
+
+		@media screen and (min-width: 720px) {
+			flex: 0 0 calc(100% / 3 - 5px);
+		}
+	}
+
+	&__item-title {
+		margin-bottom: 1rem;
+	}
+
+	&__top-shape {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+
+		svg {
+			position: relative;
+			display: block;
+			width: calc(100% + 1.3px);
+			height: 15rem;
+		}
+
+		path {
+			fill: var(--black);
+		}
+	}
+
+	&__bottom-shape {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		transform: rotate(180deg);
+
+		svg {
+			position: relative;
+			display: block;
+			width: calc(100% + 1.3px);
+			height: 15rem;
+		}
+
+		path {
+			fill: var(--black);
+		}
+	}
+}
