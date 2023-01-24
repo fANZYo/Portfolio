@@ -1,5 +1,5 @@
 .Navigation {
-	@media screen and (max-width: 719px) {
+	@media screen and (max-width: 1199px) {
 		background: var(--background);
 		display: none;
 		position: absolute;
@@ -18,7 +18,7 @@
 	}
 
 	&__container {
-		@media screen and (max-width: 719px) {
+		@media screen and (max-width: 1199px) {
 			padding: 3.2rem 1.6rem;
 		}
 	}
@@ -26,7 +26,7 @@
 	&__internal {
 		margin: 3.2rem auto;
 
-		@media screen and (min-width: 720px) {
+		@media screen and (min-width: 1200px) {
 			margin: 1.6rem 1.6rem 0 0;
 			position: fixed;
 			right: 0;
@@ -45,7 +45,7 @@
 		padding: 0;
 		width: 3rem;
 
-		@media screen and (min-width: 720px) {
+		@media screen and (min-width: 1200px) {
 			display: none;
 		}
 	}
@@ -73,12 +73,12 @@
 		display: flex;
 		justify-content: space-between;
 
-		@media screen and (max-width: 719px) {
+		@media screen and (max-width: 1199px) {
 			margin: 0 0 0 auto;
 			width: calc(4.5rem * 4);
 		}
 
-		@media screen and (min-width: 720px) {
+		@media screen and (min-width: 1200px) {
 			bottom: 1.6rem;
 			flex-direction: column;
 			height: calc(4.5rem * 4);

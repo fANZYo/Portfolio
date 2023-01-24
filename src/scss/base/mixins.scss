@@ -12,12 +12,13 @@
 
 @mixin title {
 	position: relative;
-	padding-bottom: 1rem;
+	padding-bottom: 1.5rem;
+	margin-bottom: 2rem;
 
 	&::after {
 		content: "";
 		display: block;
-		width: 5rem;
+		width: 7rem;
 		height: .3rem;
 		background-color: var(--turquoise);
 		position: absolute;
