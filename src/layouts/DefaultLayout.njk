@@ -1,9 +1,6 @@
 {% set flyingFocus %}
 	{% include "../js/flyingFocus.js" %}
 {% endset %}
-{% set theme %}
-	{% include "../js/theme.js" %}
-{% endset %}
 {% set main %}
 	{% include "../js/index.js" %}
 {% endset %}
@@ -27,10 +24,6 @@
 	<meta name="twitter:image" content="https://william-iehl.com/assets/ogImage.jpg">
 
 	{% GTAG %}
-
-	<script>// Prevent Flash Of Incorrect Theme
-		{{ theme | jsmin | safe }}
-	</script>
 
 	<link rel="preload" href="/fonts/lexendgx.ttf" as="font" crossOrigin="" />
 	<link rel="icon" href="/assets/favicon32.png">
